@@ -1,0 +1,86 @@
+<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>הזכויות שלי – לקראת גיל 18</title><link rel="stylesheet" href="styles.css"></head><body>
+
+<div id="search-overlay" class="search-overlay" aria-hidden="true"></div>
+<section id="search-modal" class="search-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="search-title">
+  <div class="search-head">
+    <h2 id="search-title">חיפוש באתר</h2>
+    <button id="search-close" class="search-close" type="button" aria-label="סגירת חיפוש">×</button>
+  </div>
+  <div class="search-box">
+    <input id="site-search-input" type="search" placeholder="לדוגמה: אי־כושר, שר״ם, עצמאי, גיוס, 20% נכות" autocomplete="off" aria-label="חיפוש באתר">
+  </div>
+  <div class="search-help">החיפוש מתבצע בכל עמודי האתר ומציג תוצאות מיידית.</div>
+  <div id="search-count" class="search-count"></div>
+  <div id="search-results" class="search-results" aria-live="polite"></div>
+</section>
+
+
+<a class="skip-link" href="#main">דלג/י לתוכן הראשי</a>
+<div id="a11y-overlay" class="a11y-overlay" aria-hidden="true"></div>
+<aside id="a11y-panel" class="a11y-panel" aria-hidden="true" aria-labelledby="a11y-title">
+  <div class="a11y-head"><h2 id="a11y-title">אפשרויות נגישות</h2><button id="a11y-close" class="a11y-close" type="button" aria-label="סגירת תפריט נגישות">×</button></div>
+  <p class="a11y-intro">אפשר להתאים את תצוגת האתר לצרכים שלך. ההעדפות נשמרות במכשיר.</p>
+  <div class="a11y-grid">
+    <button id="font-plus" class="a11y-action" type="button"><span>א+</span>הגדלת טקסט</button>
+    <button id="font-minus" class="a11y-action" type="button"><span>א−</span>הקטנת טקסט</button>
+    <button class="a11y-action" type="button" data-a11y-toggle="contrast" aria-pressed="false"><span>◐</span>ניגודיות גבוהה</button>
+    <button class="a11y-action" type="button" data-a11y-toggle="dark" aria-pressed="false"><span>☾</span>מצב כהה</button>
+    <button class="a11y-action" type="button" data-a11y-toggle="links" aria-pressed="false"><span>🔗</span>הדגשת קישורים</button>
+    <button class="a11y-action" type="button" data-a11y-toggle="readable" aria-pressed="false"><span>אא</span>גופן קריא</button>
+    <button class="a11y-action" type="button" data-a11y-toggle="spacing" aria-pressed="false"><span>↔</span>ריווח טקסט</button>
+    <button class="a11y-action" type="button" data-a11y-toggle="motion" aria-pressed="false"><span>Ⅱ</span>עצירת אנימציות</button>
+  </div>
+  <button id="a11y-reset" class="a11y-reset" type="button">איפוס הגדרות נגישות</button>
+  <a class="a11y-statement" href="accessibility.html">הצהרת נגישות</a>
+  <div class="a11y-note">הכלים מסייעים בהתאמת התצוגה. נגישות מלאה תלויה גם במבנה האתר, ניווט מקלדת, קוראי מסך ותוכן חלופי.</div>
+</aside>
+
+<header><div class="container nav">
+<a class="brand" href="index.html">הזכויות שלי<br><small>לקראת גיל 18</small></a>
+<nav class="menu">
+<a href="index.html">דף הבית</a>
+<a href="disability.html">נכות כללית</a>
+<a href="special-services.html">שר״ם</a>
+<a href="vocational-rehab.html">שיקום מקצועי</a>
+<a href="insurance.html">דמי ביטוח</a>
+<a href="links.html">קישורים</a>
+</nav>
+<button class="search-trigger" type="button" data-search-trigger aria-haspopup="dialog" aria-controls="search-modal">🔍 חיפוש</button>
+<button id="a11y-trigger" class="access" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="a11y-panel">♿ נגישות</button>
+</div></header>
+<main id="main">
+<section class="hero"><div class="container hero-grid">
+<div><div class="eyebrow">מדריך פשוט וברור למעבר לבגרות</div><h1>מתקרבים לגיל 18?</h1>
+<p>המעבר מקצבת ילד נכה לבגרות כולל כמה מסלולי זכויות שונים. כאן אפשר להבין מה רלוונטי לך, מה כדאי לבדוק ומה הצעד הבא.</p>
+<div class="ctas"><a class="btn primary" href="#check">בדיקה קצרה – מה רלוונטי לי?</a><a class="btn secondary" href="#rights">לכל הזכויות</a></div></div>
+<div class="sign"><a class="s1" href="disability.html">👤 נכות כללית</a><a class="s2" href="special-services.html">🤲 שירותים מיוחדים</a><a class="s3" href="vocational-rehab.html">🎓 שיקום מקצועי</a><a class="s4" href="insurance.html">🧮 דמי ביטוח</a></div>
+</div></section>
+
+<section id="check"><div class="container quiz"><h2>מה רלוונטי אליי?</h2><div class="sub">ענו על כמה שאלות קצרות ונראה לכם מה כדאי לבדוק</div>
+<div class="fields">
+<div class="field"><label>בן/בת כמה אתה?</label><select id="age"><option value="">בחר/י</option><option>16–17</option><option>17–18</option><option>18 ומעלה</option></select></div>
+<div class="field"><label>האם מתקבלת כיום קצבת ילד נכה?</label><select id="child"><option value="">בחר/י</option><option>כן</option><option>לא</option><option>לא בטוח/ה</option></select></div>
+<div class="field"><label>האם יש צורך בעזרה ביום־יום או בהשגחה?</label><select id="help"><option value="">בחר/י</option><option>כן</option><option>לא</option><option>לא בטוח/ה</option></select></div>
+<div class="field"><label>האם אתה עובד או מנהל עסק?</label><select id="work"><option value="">בחר/י</option><option>שכיר/ה</option><option>עצמאי/ת / עסק</option><option>לא עובד/ת</option></select></div>
+<div class="field"><label>מעניין אותך ללמוד מקצוע או להשתלב בעבודה?</label><select id="study"><option value="">בחר/י</option><option>כן</option><option>לא</option><option>לא בטוח/ה</option></select></div>
+</div><div class="quiz-action"><button class="btn primary" onclick="showResult()">הצג מה רלוונטי לי ←</button></div><div id="result" class="result"></div></div></section>
+
+<section class="section" id="rights"><div class="container"><h2>מה כדאי לבדוק?</h2><div class="sub">בחרו נושא והמשיכו להסבר קצר וברור.</div>
+<div class="cards">
+<article class="card blue"><a class="icon" href="disability.html" aria-label="נכות כללית">👤</a><h3>1. נכות כללית</h3><p>מה משתנה בגיל 18 ואיך בודקים זכאות.</p><ul><li>איך מתבצע המעבר?</li><li>תנאי זכאות</li><li>מה בודקים?</li><li>טפסים, מחשבונים וקישורים</li></ul><div class="spacer"></div><a class="btn" href="disability.html">לבדיקה ←</a></article>
+<article class="card teal"><a class="icon" href="special-services.html" aria-label="שירותים מיוחדים">🤲</a><h3>2. שירותים מיוחדים (שר״ם)</h3><p>סיוע למי שזקוק לעזרה או להשגחה.</p><ul><li>מה זה שר״ם?</li><li>מי עשוי להיות זכאי?</li><li>מה בודקים?</li><li>איך מגישים?</li></ul><div class="spacer"></div><a class="btn" href="special-services.html">לבדיקה ←</a></article>
+<article class="card purple"><a class="icon" href="vocational-rehab.html" aria-label="שיקום מקצועי">🎓</a><h3>3. שיקום מקצועי</h3><p>לימודים, הכשרה וליווי לעבודה.</p><ul><li>למי זה מתאים?</li><li>מה אפשר לקבל?</li><li>תנאי זכאות</li><li>איך מתחילים?</li></ul><div class="spacer"></div><a class="btn" href="vocational-rehab.html">לבדיקה ←</a></article>
+<article class="card orange"><a class="icon" href="insurance.html" aria-label="דמי ביטוח">🧮</a><h3>4. דמי ביטוח בגיל 17.5–18.5</h3><p>מה משלמים, מי פטור ומה משתנה בגיל 18.</p><ul><li>שכיר/ה</li><li>עצמאי/ת</li><li>לא עובד/ת</li><li>לפני גיוס/שירות</li><li>מקבל/ת קצבה</li></ul><div class="spacer"></div><a class="btn" href="insurance.html">לבדיקה ←</a></article>
+</div></div></section>
+
+<section class="section"><div class="container"><div class="next"><h2>מה הצעד הבא שלי?</h2><p>לא בטוחים מאיפה להתחיל? התחילו מהבדיקה הקצרה, עברו למסלול הרלוונטי ורכזו את המסמכים הדרושים. בכל עמוד פנימי תמצאו “מה לבדוק עכשיו” וקישורים למקור הרשמי.</p></div></div></section>
+
+<section class="section"><div class="container"><h2>קישורים חשובים</h2><div class="sub">כל הקישורים שהופיעו בקובץ שהעלית, מחוברים לעמודים הרשמיים.</div><div class="links-grid"><a class="linkbox" href="https://www.btl.gov.il/Simulators/NehutIndex/Pages/TviaDocs.aspx" target="_blank" rel="noopener"><div class="emoji">✓</div><b>הטבות למקבלי קצבת נכות</b><small>בדיקת זכויות במוסדות וארגונים אחרים</small></a></div>
+<div class="ctas" style="justify-content:center"><a class="btn secondary" href="links.html">לכל הקישורים וההסברים ←</a></div></div></section>
+</main>
+<footer><div class="container">
+המידע באתר נועד להכוונה ולסיוע ראשוני בלבד ואינו מחליף ייעוץ, החלטה או בדיקה פרטנית של המוסד לביטוח לאומי.
+תנאים, סכומים ונהלים עשויים להשתנות. מומלץ לאמת מידע עדכני לפני הגשת תביעה.
+</div></footer>
+<script src="search-index.js"></script><script src="script.js"></script></body></html>
