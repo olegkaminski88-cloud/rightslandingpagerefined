@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>משוב על האתר – הזכויות שלי לקראת גיל 18</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">דלג/י לתוכן הראשי</a>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">הזכויות שלי<br><small>לקראת גיל 18</small></a>
+    <nav class="menu">
+      <a href="index.html">דף הבית</a>
+      <a href="disability.html">נכות כללית</a>
+      <a href="special-services.html">שר״ם</a>
+      <a href="vocational-rehab.html">שיקום מקצועי</a>
+      <a href="insurance.html">דמי ביטוח</a>
+      <a href="links.html">קישורים</a>
+    </nav>
+    <a href="feedback.html" class="feedback-nav active">💬 משוב</a>
+    <button class="mobile-menu-trigger" type="button" data-mobile-menu-trigger aria-expanded="false" aria-controls="mobile-menu">☰ תפריט</button>
+  </div>
+</header>
+
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+  <a href="index.html">דף הבית</a>
+  <a href="disability.html">נכות כללית</a>
+  <a href="special-services.html">שירותים מיוחדים (שר״ם)</a>
+  <a href="vocational-rehab.html">שיקום מקצועי</a>
+  <a href="insurance.html">דמי ביטוח</a>
+  <a href="links.html">קישורים וכלי עזר</a>
+</div>
+
+<main id="main">
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">דף הבית</a> › משוב</div>
+    <span class="badge">משוב קצר</span>
+    <h1>נשמח לשמוע איך היה</h1>
+    <p>המטרה היא לבדוק אם המידע ברור ונוח לשימוש. אין צורך לכתוב שם, מספר זהות או מידע רפואי אישי.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container feedback-layout">
+    <article class="content feedback-card">
+      <form id="feedback-form" class="feedback-form">
+
+        <fieldset>
+          <legend>1. באיזה מכשיר השתמשת?</legend>
+          <div class="choice-row">
+            <label><input type="radio" name="device" value="נייד" required> נייד</label>
+            <label><input type="radio" name="device" value="מחשב"> מחשב</label>
+            <label><input type="radio" name="device" value="טאבלט"> טאבלט</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. האם מצאת את המידע שחיפשת?</legend>
+          <div class="choice-row">
+            <label><input type="radio" name="found" value="כן" required> כן</label>
+            <label><input type="radio" name="found" value="חלקית"> חלקית</label>
+            <label><input type="radio" name="found" value="לא"> לא</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. עד כמה האתר היה נוח לשימוש?</legend>
+          <div class="rating-row" aria-label="דירוג נוחות מ-1 עד 5">
+            <label><input type="radio" name="ease" value="1" required><span>1</span></label>
+            <label><input type="radio" name="ease" value="2"><span>2</span></label>
+            <label><input type="radio" name="ease" value="3"><span>3</span></label>
+            <label><input type="radio" name="ease" value="4"><span>4</span></label>
+            <label><input type="radio" name="ease" value="5"><span>5</span></label>
+          </div>
+          <div class="rating-hint"><span>לא נוח</span><span>נוח מאוד</span></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>4. מה היה לא ברור או חסר?</legend>
+          <textarea id="missing" placeholder="אפשר לכתוב בקצרה"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>5. מה כדאי לשפר?</legend>
+          <textarea id="improve" placeholder="למשל: טקסט קצר יותר, כפתורים גדולים יותר, מידע נוסף..."></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>6. האם היית ממליץ/ה לאחרים להשתמש באתר?</legend>
+          <div class="choice-row">
+            <label><input type="radio" name="recommend" value="כן" required> כן</label>
+            <label><input type="radio" name="recommend" value="לא בטוח/ה"> לא בטוח/ה</label>
+            <label><input type="radio" name="recommend" value="לא"> לא</label>
+          </div>
+        </fieldset>
+
+        <button class="btn primary feedback-submit" type="submit">הכנת המשוב לשיתוף ←</button>
+      </form>
+
+      <div id="feedback-ready" class="feedback-ready" hidden>
+        <h2>תודה 🙏</h2>
+        <p>המשוב מוכן. לחצו על “שיתוף המשוב” ושלחו אותו בחזרה לאדם שמסר לכם את הקישור לאתר.</p>
+        <pre id="feedback-summary"></pre>
+        <div class="feedback-actions">
+          <button id="share-feedback" class="btn primary" type="button">שיתוף המשוב</button>
+          <button id="copy-feedback" class="btn secondary" type="button">העתקת המשוב</button>
+          <button id="edit-feedback" class="btn secondary" type="button">חזרה לעריכה</button>
+        </div>
+        <div id="feedback-status" class="feedback-status" aria-live="polite"></div>
+      </div>
+    </article>
+
+    <aside class="feedback-note">
+      <b>למה אנחנו מבקשים משוב?</b>
+      <p>האתר נמצא בבדיקת שימושיות. המשוב עוזר לנו לשפר ניסוח, ניווט ותצוגה בנייד ובמחשב.</p>
+      <p><strong>פרטיות:</strong> אין להזין שם, מספר זהות, אבחנה רפואית או פרטים מזהים.</p>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer><div class="container">
+המידע באתר נועד להכוונה ולסיוע ראשוני בלבד ואינו מחליף ייעוץ, החלטה או בדיקה פרטנית של המוסד לביטוח לאומי.
+</div></footer>
+
+<script src="script.js"></script>
+<script>
+(function(){
+  const form = document.getElementById('feedback-form');
+  const ready = document.getElementById('feedback-ready');
+  const summaryEl = document.getElementById('feedback-summary');
+  const statusEl = document.getElementById('feedback-status');
+  let summary = "";
+
+  function chosen(name){
+    return form.querySelector('input[name="'+name+'"]:checked')?.value || "לא נבחר";
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    summary = [
+      "משוב על האתר – הזכויות שלי לקראת גיל 18",
+      "מכשיר: " + chosen("device"),
+      "מצאתי את המידע שחיפשתי: " + chosen("found"),
+      "נוחות השימוש: " + chosen("ease") + "/5",
+      "מה היה לא ברור או חסר: " + (document.getElementById('missing').value.trim() || "לא נכתב"),
+      "מה כדאי לשפר: " + (document.getElementById('improve').value.trim() || "לא נכתב"),
+      "האם הייתי ממליץ/ה לאחרים: " + chosen("recommend")
+    ].join("\n");
+
+    summaryEl.textContent = summary;
+    form.hidden = true;
+    ready.hidden = false;
+    ready.scrollIntoView({behavior:"smooth", block:"start"});
+  });
+
+  document.getElementById('share-feedback').addEventListener('click', async function(){
+    statusEl.textContent = "";
+    if(navigator.share){
+      try{
+        await navigator.share({title:"משוב על האתר", text:summary});
+        statusEl.textContent = "תודה, המשוב שותף.";
+      }catch(err){
+        if(err.name !== "AbortError") statusEl.textContent = "לא ניתן היה לפתוח את חלון השיתוף. אפשר להשתמש בהעתקה.";
+      }
+    } else {
+      try{
+        await navigator.clipboard.writeText(summary);
+        statusEl.textContent = "המכשיר לא תומך בשיתוף ישיר. המשוב הועתק ללוח.";
+      }catch(err){
+        statusEl.textContent = "אפשר לסמן ולהעתיק את הטקסט שמופיע למעלה.";
+      }
+    }
+  });
+
+  document.getElementById('copy-feedback').addEventListener('click', async function(){
+    try{
+      await navigator.clipboard.writeText(summary);
+      statusEl.textContent = "המשוב הועתק. אפשר להדביק אותו ב-WhatsApp, SMS או מייל.";
+    }catch(err){
+      statusEl.textContent = "אפשר לסמן ולהעתיק את הטקסט שמופיע למעלה.";
+    }
+  });
+
+  document.getElementById('edit-feedback').addEventListener('click', function(){
+    ready.hidden = true;
+    form.hidden = false;
+    form.scrollIntoView({behavior:"smooth", block:"start"});
+  });
+})();
+</script>
+</body>
+</html>

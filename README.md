@@ -19,3 +19,22 @@
 אין צורך בפקודת Build — זהו אתר סטטי.
 
 > לפני פרסום רשמי יש לבצע בדיקה מקצועית של תוכן, נגישות וקישורים.
+
+
+## Pilot update
+This version includes:
+- corrected homepage benefits link
+- removed "trial version" wording
+- improved mobile layout and mobile navigation
+- feedback button on all core pages
+- new `feedback.html` page
+- removal of retirement/old-age calculator content
+- search index rebuilt from the updated pages
+
+### Feedback behavior
+The feedback form does not collect or store personal data on a server.
+On mobile, the respondent can use the device Share sheet to send the prepared feedback back through WhatsApp, email, SMS, etc.
+On desktop, the feedback can be copied and pasted into a reply.
+
+### Deploy
+Upload/replace these files in the GitHub `main` branch. Vercel should deploy automatically.

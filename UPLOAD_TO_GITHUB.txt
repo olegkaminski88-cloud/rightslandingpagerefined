@@ -1,0 +1,12 @@
+עדכון אתר – גרסת פיילוט
+
+1. היכנסו ל-GitHub repository.
+2. ודאו שאתם ב-branch בשם main.
+3. החליפו/העלו את כל הקבצים שבחבילה הזו לשורש ה-repository.
+4. בצעו Commit changes.
+5. Vercel אמור ליצור Production Deployment אוטומטי.
+
+חשוב:
+- יש קובץ חדש: feedback.html
+- יש להחליף גם styles.css, script.js ו-search-index.js
+- אין צורך לשנות את הגדרות Vercel.

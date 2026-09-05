@@ -1,5 +1,5 @@
 <!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>הזכויות שלי –גרסת ניסיון לקראת גיל 18</title><link rel="stylesheet" href="styles.css"></head><body>
+<title>הזכויות שלי – לקראת גיל 18</title><link rel="stylesheet" href="styles.css"></head><body>
 
 <div id="search-overlay" class="search-overlay" aria-hidden="true"></div>
 <section id="search-modal" class="search-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="search-title">
@@ -46,9 +46,23 @@
 <a href="insurance.html">דמי ביטוח</a>
 <a href="links.html">קישורים</a>
 </nav>
+<a href="feedback.html" class="feedback-nav">💬 משוב</a>
 <button class="search-trigger" type="button" data-search-trigger aria-haspopup="dialog" aria-controls="search-modal">🔍 חיפוש</button>
+<button class="mobile-menu-trigger" type="button" data-mobile-menu-trigger aria-expanded="false" aria-controls="mobile-menu">☰ תפריט</button>
 <button id="a11y-trigger" class="access" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="a11y-panel">♿ נגישות</button>
 </div></header>
+
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+  <a href="index.html">דף הבית</a>
+  <a href="disability.html">נכות כללית</a>
+  <a href="special-services.html">שירותים מיוחדים (שר״ם)</a>
+  <a href="vocational-rehab.html">שיקום מקצועי</a>
+  <a href="insurance.html">דמי ביטוח</a>
+  <a href="links.html">קישורים וכלי עזר</a>
+  <a href="feedback.html">💬 משוב</a>
+  <button type="button" data-mobile-search>🔍 חיפוש באתר</button>
+</div>
+
 <main id="main">
 <section class="hero"><div class="container hero-grid">
 <div><div class="eyebrow">מדריך פשוט וברור למעבר לבגרות</div><h1>מתקרבים לגיל 18?</h1>
@@ -57,13 +71,13 @@
 <div class="sign"><a class="s1" href="disability.html">👤 נכות כללית</a><a class="s2" href="special-services.html">🤲 שירותים מיוחדים</a><a class="s3" href="vocational-rehab.html">🎓 שיקום מקצועי</a><a class="s4" href="insurance.html">🧮 דמי ביטוח</a></div>
 </div></section>
 
-<section id="check"><div class="container quiz"><h2>מה רלוונטי אליי?</h2><div class="sub">ענו על כמה שאלות קצרות ונראה לכם מה כדאי לבדוק</div>
+<section id="check"><div class="container quiz"><h2>מה רלוונטי אליי?</h2><div class="sub">ענו על כמה שאלות קצרות ונציג מה כדאי לבדוק</div>
 <div class="fields">
-<div class="field"><label>בן/בת כמה אתה?</label><select id="age"><option value="">בחר/י</option><option>16–17</option><option>17–18</option><option>18 ומעלה</option></select></div>
+<div class="field"><label>מה הגיל?</label><select id="age"><option value="">בחר/י</option><option>16–17</option><option>17–18</option><option>18 ומעלה</option></select></div>
 <div class="field"><label>האם מתקבלת כיום קצבת ילד נכה?</label><select id="child"><option value="">בחר/י</option><option>כן</option><option>לא</option><option>לא בטוח/ה</option></select></div>
 <div class="field"><label>האם יש צורך בעזרה ביום־יום או בהשגחה?</label><select id="help"><option value="">בחר/י</option><option>כן</option><option>לא</option><option>לא בטוח/ה</option></select></div>
-<div class="field"><label>האם אתה עובד או מנהל עסק?</label><select id="work"><option value="">בחר/י</option><option>שכיר/ה</option><option>עצמאי/ת / עסק</option><option>לא עובד/ת</option></select></div>
-<div class="field"><label>מעניין אותך ללמוד מקצוע או להשתלב בעבודה?</label><select id="study"><option value="">בחר/י</option><option>כן</option><option>לא</option><option>לא בטוח/ה</option></select></div>
+<div class="field"><label>מהו המעמד התעסוקתי?</label><select id="work"><option value="">בחר/י</option><option>שכיר/ה</option><option>עצמאי/ת / עסק</option><option>לא עובד/ת</option></select></div>
+<div class="field"><label>האם יש עניין בלימודי מקצוע או בהשתלבות בעבודה?</label><select id="study"><option value="">בחר/י</option><option>כן</option><option>לא</option><option>לא בטוח/ה</option></select></div>
 </div><div class="quiz-action"><button class="btn primary" onclick="showResult()">הצג מה רלוונטי לי ←</button></div><div id="result" class="result"></div></div></section>
 
 <section class="section" id="rights"><div class="container"><h2>מה כדאי לבדוק?</h2><div class="sub">בחרו נושא והמשיכו להסבר קצר וברור.</div>
@@ -76,11 +90,25 @@
 
 <section class="section"><div class="container"><div class="next"><h2>מה הצעד הבא שלי?</h2><p>לא בטוחים מאיפה להתחיל? התחילו מהבדיקה הקצרה, עברו למסלול הרלוונטי ורכזו את המסמכים הדרושים. בכל עמוד פנימי תמצאו “מה לבדוק עכשיו” וקישורים למקור הרשמי.</p></div></div></section>
 
-<section class="section"><div class="container"><h2>קישורים חשובים</h2><div class="sub">כל הקישורים שהופיעו בקובץ שהעלית, מחוברים לעמודים הרשמיים.</div><div class="links-grid"><a class="linkbox" href="https://www.btl.gov.il/Simulators/NehutIndex/Pages/TviaDocs.aspx" target="_blank" rel="noopener"><div class="emoji">✓</div><b>הטבות למקבלי קצבת נכות</b><small>בדיקת זכויות במוסדות וארגונים אחרים</small></a></div>
+<section class="section"><div class="container"><h2>קישורים חשובים</h2><div class="sub">כל הקישורים שהופיעו בקובץ שהעלית, מחוברים לעמודים הרשמיים.</div><div class="links-grid"><a class="linkbox" href="https://www.btl.gov.il/AllRights/Pages/mosdot.aspx?n_id=9" target="_blank" rel="noopener"><div class="emoji">✓</div><b>הטבות למקבלי קצבת נכות</b><small>בדיקת זכויות במוסדות וארגונים אחרים</small></a></div>
 <div class="ctas" style="justify-content:center"><a class="btn secondary" href="links.html">לכל הקישורים וההסברים ←</a></div></div></section>
+
+<section class="section feedback-section">
+  <div class="container">
+    <div class="feedback-strip">
+      <div>
+        <h2>העמוד היה נוח וברור?</h2>
+        <p>משוב קצר יעזור לנו להבין מה חסר ומה כדאי לשפר, במיוחד בשימוש בנייד.</p>
+      </div>
+      <a class="btn secondary" href="feedback.html">למשוב קצר ←</a>
+    </div>
+  </div>
+</section>
+
 </main>
 <footer><div class="container">
 המידע באתר נועד להכוונה ולסיוע ראשוני בלבד ואינו מחליף ייעוץ, החלטה או בדיקה פרטנית של המוסד לביטוח לאומי.
 תנאים, סכומים ונהלים עשויים להשתנות. מומלץ לאמת מידע עדכני לפני הגשת תביעה.
 </div></footer>
-<script src="search-index.js"></script><script src="script.js"></script></body></html>
+<script src="search-index.js"></script><script src="script.js"></script><a class="feedback-fab" href="feedback.html" aria-label="שליחת משוב">💬 משוב</a>
+</body></html>
