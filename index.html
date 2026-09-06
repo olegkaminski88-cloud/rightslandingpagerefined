@@ -15,7 +15,6 @@
   <div id="search-results" class="search-results" aria-live="polite"></div>
 </section>
 
-
 <a class="skip-link" href="#main">דלג/י לתוכן הראשי</a>
 <div id="a11y-overlay" class="a11y-overlay" aria-hidden="true"></div>
 <aside id="a11y-panel" class="a11y-panel" aria-hidden="true" aria-labelledby="a11y-title">
@@ -73,12 +72,12 @@
 
 <section id="check"><div class="container quiz"><h2>מה רלוונטי אליי?</h2><div class="sub">ענו על כמה שאלות קצרות ונציג מה כדאי לבדוק</div>
 <div class="fields">
-<div class="field"><label>מה הגיל?</label><select id="age"><option value="">בחר/י</option><option>16–17</option><option>17–18</option><option>18 ומעלה</option></select></div>
-<div class="field"><label>האם מתקבלת כיום קצבת ילד נכה?</label><select id="child"><option value="">בחר/י</option><option>כן</option><option>לא</option><option>לא בטוח/ה</option></select></div>
-<div class="field"><label>האם יש צורך בעזרה ביום־יום או בהשגחה?</label><select id="help"><option value="">בחר/י</option><option>כן</option><option>לא</option><option>לא בטוח/ה</option></select></div>
-<div class="field"><label>מהו המעמד התעסוקתי?</label><select id="work"><option value="">בחר/י</option><option>שכיר/ה</option><option>עצמאי/ת / עסק</option><option>לא עובד/ת</option></select></div>
-<div class="field"><label>האם יש עניין בלימודי מקצוע או בהשתלבות בעבודה?</label><select id="study"><option value="">בחר/י</option><option>כן</option><option>לא</option><option>לא בטוח/ה</option></select></div>
-</div><div class="quiz-action"><button class="btn primary" onclick="showResult()">הצג מה רלוונטי לי ←</button></div><div id="result" class="result"></div></div></section>
+<div class="field"><label for="age">מה הגיל?</label><select id="age"><option value="">בחר/י</option><option>16–17</option><option>17–18</option><option>18 ומעלה</option></select></div>
+<div class="field"><label for="child">האם מתקבלת כיום קצבת ילד נכה?</label><select id="child"><option value="">בחר/י</option><option>כן</option><option>לא</option><option>לא בטוח/ה</option></select></div>
+<div class="field"><label for="help">האם יש צורך בעזרה ביום־יום או בהשגחה?</label><select id="help"><option value="">בחר/י</option><option>כן</option><option>לא</option><option>לא בטוח/ה</option></select></div>
+<div class="field"><label for="work">מהו המעמד התעסוקתי?</label><select id="work"><option value="">בחר/י</option><option>שכיר/ה</option><option>עצמאי/ת / עסק</option><option>לא עובד/ת</option></select></div>
+<div class="field"><label for="study">האם יש עניין בלימודי מקצוע או בהשתלבות בעבודה?</label><select id="study"><option value="">בחר/י</option><option>כן</option><option>לא</option><option>לא בטוח/ה</option></select></div>
+</div><div class="quiz-action"><button class="btn primary" onclick="showResult()">הצג מה רלוונטי לי ←</button></div><div id="result" class="result" aria-live="polite" aria-atomic="true"></div></div></section>
 
 <section class="section" id="rights"><div class="container"><h2>מה כדאי לבדוק?</h2><div class="sub">בחרו נושא והמשיכו להסבר קצר וברור.</div>
 <div class="cards">
