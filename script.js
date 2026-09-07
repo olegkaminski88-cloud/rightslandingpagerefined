@@ -36,11 +36,11 @@
   apply();
 
   window.showResult=function(){
-    const age=document.getElementById('age')?.value||'',child=document.getElementById('child')?.value||'',help=document.getElementById('help')?.value||'',work=document.getElementById('work')?.value||'',study=document.getElementById('study')?.value||'';
+    const age=document.getElementById('age')?.value||'',child=document.getElementById('child')?.value||'',help=document.getElementById('help')?.value||'',work=document.getElementById('work')?.value||'';
     const items=[];
     if(child==='כן'||age==='17–18'||age==='18 ומעלה')items.push('<a href="disability.html">נכות כללית – בדיקת מעבר וזכאות</a>');
     if(help==='כן'||help==='לא בטוח/ה')items.push('<a href="special-services.html">שירותים מיוחדים – בדיקת תלות או השגחה</a>');
-    if(study==='כן'||study==='לא בטוח/ה')items.push('<a href="vocational-rehab.html">שיקום מקצועי – לימודים והשתלבות בעבודה</a>');
+    if(age==='18 ומעלה')items.push('<a href="vocational-rehab.html#rehab-check">שיקום מקצועי – בדיקה ממוקדת של צורך בהכשרה והשתלבות בעבודה</a>');
     if(work||age==='17–18'||age==='18 ומעלה')items.push('<a href="insurance.html">דמי ביטוח – מעמד, חיוב ופטורים</a>');
     if(!items.length)items.push('כדאי להשלים את השאלות כדי לקבל כיוון ראשוני.');
     const r=document.getElementById('result');if(r){r.style.display='block';r.innerHTML='<b>לפי מה שסימנת, כדאי לבדוק:</b><br>• '+items.join('<br>• ');}
