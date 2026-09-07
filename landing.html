@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7fbfc">
+  <title>הזכויות שלי – לקראת גיל 18 | טיוטת מובייל</title>
+  <style>
+    :root{
+      --navy:#173f67;
+      --blue:#4f95d8;
+      --teal:#3aa7a1;
+      --mint:#dff4ed;
+      --lav:#eee8fb;
+      --peach:#fff0df;
+      --sky:#eaf4fd;
+      --ink:#18324b;
+      --muted:#617487;
+      --line:#dce8ef;
+      --paper:#ffffff;
+      --bg:#f7fbfc;
+      --radius:22px;
+      --shadow:0 10px 30px rgba(25,62,92,.08);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial,"Noto Sans Hebrew",sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.55;
+    }
+    a{text-decoration:none;color:inherit}
+    button,a{touch-action:manipulation}
+    .wrap{width:min(1120px,calc(100% - 32px));margin:auto}
+
+    header{
+      position:sticky;top:0;z-index:20;
+      background:rgba(255,255,255,.94);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar{
+      min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px;
+    }
+    .brand{font-weight:800;color:var(--navy);line-height:1.05}
+    .brand small{display:block;font-size:12px;font-weight:600;margin-top:3px}
+    nav{display:flex;gap:18px;font-size:14px;color:#36506a}
+    .menu{display:none;font-size:28px;line-height:1}
+
+    .hero{
+      background:
+        radial-gradient(circle at 15% 20%, rgba(79,149,216,.18), transparent 34%),
+        radial-gradient(circle at 85% 10%, rgba(58,167,161,.13), transparent 30%),
+        linear-gradient(135deg,#f4fbff,#f9fffc 60%,#fffaf4);
+      padding:54px 0 46px;
+      overflow:hidden;
+    }
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:40px}
+    h1{font-size:clamp(38px,5vw,68px);line-height:1.05;margin:0;color:var(--navy);letter-spacing:-1px}
+    .accent{color:var(--teal)}
+    .hero p{font-size:19px;color:#41586d;margin:20px 0 26px;max-width:640px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;min-height:50px;
+      padding:0 24px;border-radius:15px;font-weight:800;border:1px solid transparent;
+      transition:.2s ease;
+    }
+    .btn-primary{background:var(--teal);color:white;box-shadow:0 8px 20px rgba(58,167,161,.2)}
+    .btn-secondary{background:white;border-color:#75a9ca;color:var(--navy)}
+
+    .art{
+      min-height:330px;border-radius:30px;background:linear-gradient(180deg,#eaf6fb,#eef8ef);
+      position:relative;box-shadow:var(--shadow);overflow:hidden;
+    }
+    .hill{position:absolute;border-radius:50% 50% 0 0;background:#cfe7dc;bottom:-70px;width:420px;height:190px;left:-40px;transform:rotate(-5deg)}
+    .hill2{position:absolute;border-radius:50% 50% 0 0;background:#d7eaf6;bottom:-80px;width:430px;height:200px;right:-80px;transform:rotate(6deg)}
+    .path{position:absolute;bottom:-10px;left:46%;width:95px;height:310px;background:#fff0d9;border-radius:60% 55% 10% 10%;transform:rotate(8deg)}
+    .sign{position:absolute;left:56px;top:72px;width:190px}
+    .post{width:12px;height:210px;background:#6f8799;margin:auto;border-radius:8px}
+    .board{position:absolute;right:0;width:185px;padding:10px 16px;border-radius:10px;background:#9ed8cf;color:#173f67;font-weight:800;text-align:center}
+    .b1{top:0}.b2{top:58px;background:#b8daf2}.b3{top:116px;background:#ffe0ab}
+    .scribble{position:absolute;right:36px;bottom:34px;font-size:18px;color:#225d7c;transform:rotate(-5deg)}
+
+    section{padding:52px 0}
+    .section-title{text-align:center;margin:0 0 8px;font-size:34px;color:var(--navy)}
+    .section-sub{text-align:center;color:var(--muted);margin:0 0 28px}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .card{
+      padding:24px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(0,0,0,.025);
+      min-height:250px;display:flex;flex-direction:column
+    }
+    .card h3{font-size:23px;margin:10px 0 8px;color:var(--navy)}
+    .card p{color:#465d71;margin:0 0 16px}
+    .card a{margin-top:auto;font-weight:800}
+    .c-blue{background:linear-gradient(180deg,#f3f9ff,#e6f2fc)}
+    .c-teal{background:linear-gradient(180deg,#f1fcfa,#dff4ed)}
+    .c-lav{background:linear-gradient(180deg,#faf8ff,#eee8fb)}
+    .c-peach{background:linear-gradient(180deg,#fffaf4,#fff0df)}
+    .icon{
+      width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-size:27px;
+      background:rgba(255,255,255,.75);color:var(--navy)
+    }
+
+    .steps{
+      background:linear-gradient(180deg,#f5fbff,#fff);
+      border-top:1px solid var(--line);border-bottom:1px solid var(--line)
+    }
+    .step-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .step{text-align:center;padding:8px 16px}
+    .num{
+      width:52px;height:52px;border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;
+      background:#dceefa;color:var(--navy);font-weight:900;font-size:20px
+    }
+    .step h4{margin:0 0 6px;font-size:19px;color:var(--navy)}
+    .step p{margin:0;color:var(--muted)}
+
+    .why{
+      background:linear-gradient(90deg,#eaf8f5,#f4fbff);
+    }
+    .why-box{
+      display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:center;
+      padding:30px;border-radius:28px;background:rgba(255,255,255,.65)
+    }
+    .ticks{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .tick{text-align:center;padding:14px;background:white;border-radius:18px}
+    .tick b{display:block;margin-top:8px;color:var(--navy)}
+
+    .final-cta{
+      padding:44px 0;background:linear-gradient(135deg,#edf5ff,#eefaf6)
+    }
+    .final-box{text-align:center}
+    .final-box h2{font-size:32px;margin:0 0 8px;color:var(--navy)}
+    .final-box p{color:var(--muted);margin:0 0 20px}
+
+    footer{background:#fff;border-top:1px solid var(--line);padding:26px 0 34px;color:#607386;font-size:13px}
+    .footer-links{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+    .disclaimer{max-width:900px}
+
+    @media (max-width:900px){
+      nav{display:none}.menu{display:block}
+      .hero{padding:28px 0 32px}
+      .hero-grid{grid-template-columns:1fr;gap:22px}
+      .art{order:2;min-height:260px}
+      .cards{grid-template-columns:repeat(2,1fr)}
+      .step-grid{grid-template-columns:repeat(2,1fr)}
+      .why-box{grid-template-columns:1fr}
+    }
+
+    @media (max-width:560px){
+      .wrap{width:min(100% - 22px,1120px)}
+      .topbar{min-height:62px}
+      .hero-grid{gap:18px}
+      h1{font-size:42px}
+      .hero p{font-size:17px;margin:16px 0 20px}
+      .cta{display:grid;grid-template-columns:1fr}
+      .btn{width:100%;min-height:52px}
+      .art{min-height:235px;border-radius:22px}
+      .sign{left:22px;top:48px;transform:scale(.88);transform-origin:left top}
+      .scribble{right:20px;bottom:20px;font-size:16px}
+      section{padding:38px 0}
+      .section-title{font-size:29px}
+      .section-sub{font-size:15px;margin-bottom:20px}
+      .cards{grid-template-columns:1fr}
+      .card{min-height:0;padding:20px}
+      .card h3{font-size:22px}
+      .step-grid{grid-template-columns:1fr}
+      .step{
+        display:grid;grid-template-columns:54px 1fr;text-align:right;column-gap:12px;align-items:start;
+        padding:10px 0
+      }
+      .step .num{grid-row:1/3;margin:0}
+      .step h4,.step p{margin:0}
+      .ticks{grid-template-columns:1fr}
+      .why-box{padding:22px}
+      .final-box h2{font-size:28px}
+      footer{padding-bottom:26px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap topbar">
+    <div class="brand">הזכויות שלי<small>לקראת גיל 18</small></div>
+    <nav aria-label="ניווט ראשי">
+      <a href="#home">דף הבית</a>
+      <a href="#rights">נכות כללית</a>
+      <a href="#rights">שר״ם</a>
+      <a href="#rights">שיקום מקצועי</a>
+      <a href="#rights">דמי ביטוח</a>
+      <a href="#how">איך מתחילים?</a>
+    </nav>
+    <div class="menu" aria-label="תפריט">☰</div>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>מתקרבים לגיל 18?<br><span class="accent">כדאי לבדוק אילו זכויות עשויות להיות רלוונטיות</span></h1>
+        <p>
+          המעבר לגיל 18 יכול להביא איתו שינויים בזכויות, בקצבאות ובמעמד מול הביטוח הלאומי.
+          ריכזנו מידע פשוט וברור שיעזור להבין מה כדאי לבדוק, אילו מסלולים עשויים להיות רלוונטיים ואיפה למצוא מידע רשמי נוסף.
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#rights">התחילו לבדוק את הזכויות ←</a>
+          <a class="btn btn-secondary" href="#full">מעבר לאתר המלא</a>
+        </div>
+      </div>
+
+      <div class="art" aria-label="איור דרך וכיווני זכויות">
+        <div class="hill"></div>
+        <div class="hill2"></div>
+        <div class="path"></div>
+        <div class="sign">
+          <div class="post"></div>
+          <div class="board b1">יותר מידע</div>
+          <div class="board b2">יותר סדר</div>
+          <div class="board b3">יותר אפשרויות</div>
+        </div>
+        <div class="scribble">צעד אחד ברור<br>יכול לעשות הרבה סדר ♡</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rights">
+    <div class="wrap">
+      <h2 class="section-title">מה כדאי לבדוק לקראת גיל 18?</h2>
+      <p class="section-sub">ארבעה תחומים מרכזיים שכדאי להכיר</p>
+
+      <div class="cards">
+        <article class="card c-blue">
+          <div class="icon">♿</div>
+          <h3>נכות כללית</h3>
+          <p>מה משתנה במעבר מקצבת ילד נכה, מהם תנאי הזכאות ומה בודקים לאחר גיל 18.</p>
+          <a href="#full">למידע על נכות כללית ←</a>
+        </article>
+
+        <article class="card c-teal">
+          <div class="icon">⌂</div>
+          <h3>שירותים מיוחדים (שר״ם)</h3>
+          <p>למי שזקוק לעזרה בפעולות היום־יום או להשגחה, ובכפוף לתנאי הזכאות.</p>
+          <a href="#full">למידע על שר״ם ←</a>
+        </article>
+
+        <article class="card c-lav">
+          <div class="icon">💼</div>
+          <h3>שיקום מקצועי</h3>
+          <p>אפשרויות ללימודים, הכשרה וליווי להשתלבות בעבודה למי שעומד בתנאים.</p>
+          <a href="#full">למידע על שיקום מקצועי ←</a>
+        </article>
+
+        <article class="card c-peach">
+          <div class="icon">◉</div>
+          <h3>דמי ביטוח</h3>
+          <p>מה משתנה בגיל 18 לפי המעמד: שכיר, עצמאי, לא עובד, לפני גיוס או מקבל קצבה.</p>
+          <a href="#full">למידע על דמי ביטוח ←</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps" id="how">
+    <div class="wrap">
+      <h2 class="section-title">איך מתחילים?</h2>
+      <p class="section-sub">ארבעה צעדים פשוטים שיעזרו לעשות סדר</p>
+
+      <div class="step-grid">
+        <div class="step">
+          <div class="num">1</div>
+          <h4>בודקים מה רלוונטי</h4>
+          <p>עוברים על התחומים המרכזיים ומזהים מה מתאים למצב האישי.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h4>קוראים את המידע</h4>
+          <p>נכנסים לעמוד המתאים ומבינים את התנאים והאפשרויות.</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h4>מכינים מסמכים</h4>
+          <p>אוספים מסמכים רפואיים ופרטים חשובים, אם נדרש.</p>
+        </div>
+        <div class="step">
+          <div class="num">4</div>
+          <h4>מתקדמים לבדיקה או להגשה</h4>
+          <p>עוברים למקור הרשמי או להמשך בירור לפי הצורך.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="wrap why-box">
+      <div>
+        <h2 class="section-title" style="text-align:right;margin-bottom:8px">למה האתר הזה?</h2>
+        <h3 style="font-size:30px;margin:0 0 12px;color:var(--navy)">פחות בירוקרטיה. יותר סדר.</h3>
+        <p style="margin:0;color:var(--muted)">
+          המידע מפוזר בין עמודים, תנאים וטפסים שונים. המטרה כאן היא לעשות סדר,
+          להסביר בשפה פשוטה ולכוון למקור הרשמי.
+        </p>
+      </div>
+      <div class="ticks">
+        <div class="tick">✓<b>מידע מרוכז</b></div>
+        <div class="tick">💬<b>שפה פשוטה</b></div>
+        <div class="tick">🔗<b>מקורות רשמיים</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta" id="full">
+    <div class="wrap final-box">
+      <h2>רוצים להבין מה כדאי לבדוק עכשיו?</h2>
+      <p>עברו לאתר המלא, השתמשו בבדיקה הקצרה ובחרו את התחום הרלוונטי.</p>
+      <div class="cta" style="justify-content:center">
+        <a class="btn btn-primary" href="#">לאתר המלא ←</a>
+        <a class="btn btn-secondary" href="#">בדיקה קצרה – מה רלוונטי לי?</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="#">דף הבית</a>
+      <a href="#">נכות כללית</a>
+      <a href="#">שר״ם</a>
+      <a href="#">שיקום מקצועי</a>
+      <a href="#">דמי ביטוח</a>
+      <a href="#">קישורים</a>
+      <a href="#">משוב</a>
+      <a href="#">הצהרת נגישות</a>
+    </div>
+    <div class="disclaimer">
+      המידע נועד להכוונה ראשונית בלבד ואינו מחליף בדיקה פרטנית מול המוסד לביטוח לאומי.
+      תנאים, סכומים ונהלים עשויים להשתנות.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
