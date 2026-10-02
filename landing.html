@@ -129,6 +129,25 @@
     .tick{text-align:center;padding:14px;background:white;border-radius:18px}
     .tick b{display:block;margin-top:8px;color:var(--navy)}
 
+    .landing-quiz{
+      background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px;
+      box-shadow:var(--shadow);max-width:1000px;margin:0 auto
+    }
+    .quiz-fields{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .quiz-fields label{
+      display:flex;flex-direction:column;gap:8px;font-weight:800;color:var(--navy);
+      background:#f8fbfe;border:1px solid #e0ecf5;border-radius:14px;padding:12px
+    }
+    .quiz-fields select{
+      width:100%;min-height:46px;border:1px solid #c8dae9;border-radius:12px;
+      padding:10px;background:#fff;color:var(--ink);font:inherit
+    }
+    .landing-result{
+      display:none;margin-top:18px;background:linear-gradient(90deg,#e9f8f7,#edf6ff);
+      border:1px solid #c9e4ec;border-radius:16px;padding:18px;color:var(--ink)
+    }
+    .landing-result b{color:var(--navy)}
+    .landing-result ul{margin:8px 0 0;padding-right:20px}
     .final-cta{
       padding:44px 0;background:linear-gradient(135deg,#eaf7ff,#eefbf9)
     }
@@ -146,6 +165,7 @@
       .hero-grid{grid-template-columns:1fr;gap:22px}
       .art{order:2;min-height:260px}
       .cards{grid-template-columns:repeat(2,1fr)}
+      .quiz-fields{grid-template-columns:1fr 1fr}
       .step-grid{grid-template-columns:repeat(2,1fr)}
       .why-box{grid-template-columns:1fr}
     }
@@ -165,6 +185,8 @@
       .section-title{font-size:29px}
       .section-sub{font-size:15px;margin-bottom:20px}
       .cards{grid-template-columns:1fr}
+      .quiz-fields{grid-template-columns:1fr}
+      .landing-quiz{padding:18px}
       .card{min-height:0;padding:20px}
       .card h3{font-size:22px}
       .step-grid{grid-template-columns:1fr}
@@ -188,10 +210,8 @@
     <div class="brand">הזכויות שלי<small>לקראת גיל 18</small></div>
     <nav aria-label="ניווט ראשי">
       <a href="#home">דף הבית</a>
-      <a href="#rights">נכות כללית</a>
-      <a href="#rights">שר״ם</a>
-      <a href="#rights">שיקום מקצועי</a>
-      <a href="#rights">דמי ביטוח</a>
+      <a href="#check">בדיקה קצרה</a>
+      <a href="#rights">מה כדאי לבדוק?</a>
       <a href="#how">איך מתחילים?</a>
     </nav>
     <div class="menu" aria-label="תפריט">☰</div>
@@ -208,8 +228,7 @@
           ריכזנו מידע פשוט וברור שיעזור להבין מה כדאי לבדוק, אילו מסלולים עשויים להיות רלוונטיים ואיפה למצוא מידע רשמי נוסף.
         </p>
         <div class="cta">
-          <a class="btn btn-primary" href="#rights">התחילו לבדוק את הזכויות ←</a>
-          <a class="btn btn-secondary" href="index.html">מעבר לאתר המלא</a>
+          <a class="btn btn-primary" href="#check">בדיקה קצרה – מה כדאי לבדוק? ←</a>
         </div>
       </div>
 
@@ -228,6 +247,63 @@
     </div>
   </section>
 
+  
+  <section id="check">
+    <div class="wrap">
+      <h2 class="section-title">בדיקה קצרה – מה כדאי לבדוק?</h2>
+      <p class="section-sub">ענו על חמש שאלות קצרות וקבלו כיוון ראשוני</p>
+      <div class="landing-quiz">
+        <div class="quiz-fields">
+          <label>מה הגיל?
+            <select id="q-age">
+              <option value="">בחר/י</option>
+              <option>16–17</option>
+              <option>17–18</option>
+              <option>18 ומעלה</option>
+            </select>
+          </label>
+          <label>האם מתקבלת כיום קצבת ילד נכה?
+            <select id="q-child">
+              <option value="">בחר/י</option>
+              <option>כן</option>
+              <option>לא</option>
+              <option>לא בטוח/ה</option>
+            </select>
+          </label>
+          <label>האם יש צורך בעזרה ביום־יום או בהשגחה?
+            <select id="q-help">
+              <option value="">בחר/י</option>
+              <option>כן</option>
+              <option>לא</option>
+              <option>לא בטוח/ה</option>
+            </select>
+          </label>
+          <label>מהו המעמד התעסוקתי?
+            <select id="q-work">
+              <option value="">בחר/י</option>
+              <option>שכיר/ה</option>
+              <option>עצמאי/ת / עסק</option>
+              <option>לא עובד/ת</option>
+            </select>
+          </label>
+          <label>האם לומד/ת בחינוך מיוחד או מקבל/ת שירותי חינוך מיוחדים?
+            <select id="q-education">
+              <option value="">בחר/י</option>
+              <option>כן – במסגרת חינוך מיוחד</option>
+              <option>כן – משולב/ת בחינוך רגיל עם שירותי חינוך מיוחדים</option>
+              <option>לא</option>
+              <option>לא בטוח/ה</option>
+            </select>
+          </label>
+        </div>
+        <div style="text-align:center;margin-top:20px">
+          <button class="btn btn-primary" type="button" onclick="showLandingResult()">הצג מה כדאי לבדוק ←</button>
+        </div>
+        <div id="landing-result" class="landing-result" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
   <section id="rights">
     <div class="wrap">
       <h2 class="section-title">מה כדאי לבדוק לקראת גיל 18?</h2>
@@ -238,28 +314,28 @@
           <div class="icon">♿</div>
           <h3>נכות כללית</h3>
           <p>מה משתנה במעבר מקצבת ילד נכה, מהם תנאי הזכאות ומה בודקים לאחר גיל 18.</p>
-          <a href="disability.html">למידע על נכות כללית ←</a>
+          <span style="margin-top:auto;font-weight:800;color:var(--navy)">נכות כללית</span>
         </article>
 
         <article class="card c-teal">
           <div class="icon">⌂</div>
           <h3>שירותים מיוחדים (שר״ם)</h3>
           <p>למי שזקוק לעזרה בפעולות היום־יום או להשגחה, ובכפוף לתנאי הזכאות.</p>
-          <a href="special-services.html">למידע על שר״ם ←</a>
+          <span style="margin-top:auto;font-weight:800;color:var(--navy)">שירותים מיוחדים (שר״ם)</span>
         </article>
 
         <article class="card c-lav">
           <div class="icon">💼</div>
           <h3>שיקום מקצועי</h3>
           <p>אפשרויות ללימודים, הכשרה וליווי להשתלבות בעבודה למי שעומד בתנאים.</p>
-          <a href="vocational-rehab.html">למידע על שיקום מקצועי ←</a>
+          <span style="margin-top:auto;font-weight:800;color:var(--navy)">שיקום מקצועי</span>
         </article>
 
         <article class="card c-peach">
           <div class="icon">◉</div>
           <h3>דמי ביטוח</h3>
           <p>מה משתנה בגיל 18 לפי המעמד: שכיר, עצמאי, לא עובד, לפני גיוס או מקבל קצבה.</p>
-          <a href="insurance.html">למידע על דמי ביטוח ←</a>
+          <span style="margin-top:auto;font-weight:800;color:var(--navy)">דמי ביטוח</span>
         </article>
       </div>
     </div>
@@ -313,14 +389,11 @@
     </div>
   </section>
 
-  <section class="final-cta" id="full">
+  <section class="final-cta">
     <div class="wrap final-box">
-      <h2>רוצים להבין מה כדאי לבדוק עכשיו?</h2>
-      <p>עברו לאתר המלא, השתמשו בבדיקה הקצרה ובחרו את התחום הרלוונטי.</p>
-      <div class="cta" style="justify-content:center">
-        <a class="btn btn-primary" href="index.html">לאתר המלא ←</a>
-        <a class="btn btn-secondary" href="index.html#check">בדיקה קצרה – מה רלוונטי לי?</a>
-      </div>
+      <h2>עשינו קצת סדר?</h2>
+      <p>המידע בעמוד נועד לתת כיוון ראשוני לגבי הנושאים שכדאי לבדוק לקראת גיל 18.</p>
+      <a class="btn btn-primary" href="#check">חזרה לבדיקה הקצרה ↑</a>
     </div>
   </section>
 </main>
@@ -328,13 +401,10 @@
 <footer>
   <div class="wrap">
     <div class="footer-links">
-      <a href="index.html">האתר המלא</a>
-      <a href="disability.html">נכות כללית</a>
-      <a href="special-services.html">שר״ם</a>
-      <a href="vocational-rehab.html">שיקום מקצועי</a>
-      <a href="insurance.html">דמי ביטוח</a>
-      <a href="links.html">קישורים</a>
-      <a href="accessibility.html">הצהרת נגישות</a>
+      <a href="#home">דף הבית</a>
+      <a href="#check">בדיקה קצרה</a>
+      <a href="#rights">מה כדאי לבדוק?</a>
+      <a href="#how">איך מתחילים?</a>
     </div>
     <div class="disclaimer">
       המידע באתר הוא מידע כללי ואינפורמטיבי בלבד. האתר אינו אתר רשמי של המוסד לביטוח לאומי ואינו מחליף ייעוץ, בדיקה או החלטה של גורם מוסמך. תנאים, סכומים ונהלים עשויים להשתנות.
@@ -342,5 +412,42 @@
   </div>
 </footer>
 
+<script>
+function showLandingResult(){
+  const age=document.getElementById('q-age').value;
+  const child=document.getElementById('q-child').value;
+  const help=document.getElementById('q-help').value;
+  const work=document.getElementById('q-work').value;
+  const education=document.getElementById('q-education').value;
+  const box=document.getElementById('landing-result');
+
+  if(!age || !child || !help || !work || !education){
+    box.style.display='block';
+    box.innerHTML='<b>כדי לקבל כיוון ראשוני, נא לענות על כל חמש השאלות.</b>';
+    return;
+  }
+
+  const items=[];
+  if(age==='17–18' || age==='18 ומעלה' || child==='כן' || child==='לא בטוח/ה'){
+    items.push('נכות כללית – כדאי לבדוק את המעבר מקצבת ילד נכה ואת תנאי הזכאות לאחר גיל 18.');
+  }
+  if(help==='כן' || help==='לא בטוח/ה'){
+    items.push('שירותים מיוחדים (שר״ם) – כדאי לבדוק זכאות אם יש צורך בעזרה בפעולות היום־יום או בהשגחה.');
+  }
+  if(age==='17–18' || age==='18 ומעלה'){
+    items.push('שיקום מקצועי – ייתכן שכדאי לבדוק אפשרויות ללימודים, הכשרה וליווי להשתלבות בעבודה.');
+  }
+  if(work){
+    items.push('דמי ביטוח – כדאי לבדוק מה חל לפי המעמד התעסוקתי והגיל.');
+  }
+  if(education!=='לא'){
+    items.push('חינוך מיוחד ושילוב – כדאי לבדוק כיצד מסגרת הלימודים עשויה להיות רלוונטית למעבר לגיל 18.');
+  }
+
+  box.style.display='block';
+  box.innerHTML='<b>לפי התשובות שלך, כדאי לבדוק:</b><ul>'+items.map(x=>'<li>'+x+'</li>').join('')+'</ul><p style="margin:10px 0 0;color:var(--muted)">זהו כיוון ראשוני בלבד ואינו קובע זכאות.</p>';
+  box.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+</script>
 </body>
 </html>
