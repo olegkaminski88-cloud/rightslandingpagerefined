@@ -30,7 +30,19 @@
         </fieldset>
 
         <fieldset>
-          <legend>2. האם מצאת את המידע שחיפשת?</legend>
+          <legend>2. באיזה נושא חיפשת מידע?</legend>
+          <div class="choice-row">
+            <label><input type="radio" name="topic" value="נכות כללית" required> נכות כללית</label>
+            <label><input type="radio" name="topic" value="שירותים מיוחדים (שר״ם)"> שירותים מיוחדים (שר״ם)</label>
+            <label><input type="radio" name="topic" value="חינוך מיוחד"> חינוך מיוחד</label>
+            <label><input type="radio" name="topic" value="שיקום מקצועי"> שיקום מקצועי</label>
+            <label><input type="radio" name="topic" value="דמי ביטוח"> דמי ביטוח</label>
+            <label><input type="radio" name="topic" value="נושא אחר"> נושא אחר</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. האם מצאת את המידע שחיפשת?</legend>
           <div class="choice-row">
             <label><input type="radio" name="found" value="כן" required> כן</label>
             <label><input type="radio" name="found" value="חלקית"> חלקית</label>
@@ -39,7 +51,16 @@
         </fieldset>
 
         <fieldset>
-          <legend>3. עד כמה האתר היה נוח לשימוש?</legend>
+          <legend>4. אחרי השימוש באתר, האם ברור לך מה הצעד הבא שלך?</legend>
+          <div class="choice-row">
+            <label><input type="radio" name="nextstep" value="כן" required> כן</label>
+            <label><input type="radio" name="nextstep" value="חלקית"> חלקית</label>
+            <label><input type="radio" name="nextstep" value="לא"> לא</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>5. עד כמה האתר היה נוח וברור?</legend>
           <div class="rating-row" aria-label="דירוג נוחות מ-1 עד 5">
             <label><input type="radio" name="ease" value="1" required><span>1</span></label>
             <label><input type="radio" name="ease" value="2"><span>2</span></label>
@@ -51,17 +72,12 @@
         </fieldset>
 
         <fieldset>
-          <legend>4. מה היה לא ברור או חסר?</legend>
-          <textarea id="missing" placeholder="אפשר לכתוב בקצרה"></textarea>
+          <legend>6. האם היה משהו לא ברור, חסר או שהיית משנה באתר?</legend>
+          <textarea id="comments" placeholder="אפשר לכתוב בקצרה"></textarea>
         </fieldset>
 
         <fieldset>
-          <legend>5. מה כדאי לשפר?</legend>
-          <textarea id="improve" placeholder="למשל: טקסט קצר יותר, כפתורים גדולים יותר, מידע נוסף..."></textarea>
-        </fieldset>
-
-        <fieldset>
-          <legend>6. האם היית ממליץ/ה לאחרים להשתמש באתר?</legend>
+          <legend>7. האם היית ממליץ/ה לאחרים להשתמש באתר?</legend>
           <div class="choice-row">
             <label><input type="radio" name="recommend" value="כן" required> כן</label>
             <label><input type="radio" name="recommend" value="לא בטוח/ה"> לא בטוח/ה</label>
@@ -110,10 +126,11 @@
     summary=[
       "משוב על מדריך הזכויות לקראת גיל 18",
       "מכשיר: "+chosen("device"),
+      "נושא שחיפשתי: "+chosen("topic"),
       "מצאתי את המידע שחיפשתי: "+chosen("found"),
-      "נוחות השימוש: "+chosen("ease")+"/5",
-      "מה היה לא ברור או חסר: "+(document.getElementById('missing').value.trim()||"לא נכתב"),
-      "מה כדאי לשפר: "+(document.getElementById('improve').value.trim()||"לא נכתב"),
+      "ברור לי מה הצעד הבא: "+chosen("nextstep"),
+      "נוחות ובהירות האתר: "+chosen("ease")+"/5",
+      "מה היה לא ברור, חסר או שהייתי משנה: "+(document.getElementById('comments').value.trim()||"לא נכתב"),
       "האם הייתי ממליץ/ה לאחרים: "+chosen("recommend")
     ].join("\n");
     summaryEl.textContent=summary;
