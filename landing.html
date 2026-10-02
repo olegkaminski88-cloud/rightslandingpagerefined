@@ -96,6 +96,11 @@
     .card h3{font-size:23px;margin:10px 0 8px;color:var(--navy)}
     .card p{color:#465d71;margin:0 0 16px}
     .card a{margin-top:auto;font-weight:800}
+    .card-action{margin:4px 0 16px;padding:12px;border-radius:14px;background:rgba(255,255,255,.68);font-size:14px}
+    .card-action b{display:block;color:var(--navy);margin-bottom:3px}
+    .card-action span{color:#4c647a}
+    .mini-link{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:9px 12px;border:1px solid #a9c4dc;background:#fff;border-radius:12px;color:var(--navy);font-weight:800}
+    .mini-link.strong{margin-top:16px;background:linear-gradient(180deg,#0d69c8,#0b4f9c);color:#fff;border-color:transparent}
     .c-blue{background:linear-gradient(180deg,#f7fbff,#eaf4fc)}
     .c-teal{background:linear-gradient(180deg,#f4fdfc,#e1f8f6)}
     .c-lav{background:linear-gradient(180deg,#f6faff,#e8f3fc)}
@@ -104,6 +109,17 @@
       width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-size:27px;
       background:rgba(255,255,255,.75);color:var(--navy)
     }
+
+    .practical-section{background:#fff}
+    .practical-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .practical-card{display:flex;gap:14px;align-items:flex-start;padding:18px;border:1px solid var(--line);border-radius:18px;background:#f8fbfe}
+    .practical-card b{color:var(--navy);font-size:18px}
+    .practical-card p{margin:5px 0 0;color:var(--muted)}
+    .practical-num{flex:0 0 38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#dceef9;color:var(--navy);font-weight:900}
+    .prepare-box{margin-top:20px;padding:22px;border-radius:22px;background:linear-gradient(90deg,#e9f8f7,#edf6ff);border:1px solid #cfe3ee}
+    .prepare-box h3{margin:0 0 12px;color:var(--navy);font-size:23px}
+    .prepare-tags{display:flex;gap:9px;flex-wrap:wrap}
+    .prepare-tags span{background:#fff;border:1px solid #d8e7f1;border-radius:999px;padding:8px 12px;color:#3f5c72;font-weight:700;font-size:14px}
 
     .steps{
       background:linear-gradient(180deg,#f5fbff,#fff);
@@ -148,6 +164,11 @@
     }
     .landing-result b{color:var(--navy)}
     .landing-result ul{margin:8px 0 0;padding-right:20px}
+    .smart-results{display:grid;gap:10px;margin-top:14px}
+    .smart-result{background:#fff;border:1px solid #d6e6f3;border-radius:14px;padding:14px}
+    .smart-result h4{margin:0 0 6px;color:var(--navy);font-size:18px}
+    .smart-result p{margin:5px 0;color:#4f667b}
+    .smart-result a{display:inline-flex;margin-top:8px;color:var(--navy);font-weight:800}
     .official-links{
       display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:900px;margin:24px auto 0
     }
@@ -164,6 +185,11 @@
       border:1px solid #9fbdd8;background:#fff;border-radius:12px;padding:9px 12px;
       color:var(--navy);font-weight:800
     }
+    .faq-section{background:#fff}
+    .faq-list{max-width:900px;margin:24px auto 0;display:grid;gap:10px}
+    .faq-list details{background:#f8fbfe;border:1px solid var(--line);border-radius:16px;padding:0 18px}
+    .faq-list summary{cursor:pointer;padding:16px 0;color:var(--navy);font-weight:800}
+    .faq-list p{margin:0 0 16px;color:var(--muted)}
     .final-cta{
       padding:44px 0;background:linear-gradient(135deg,#eaf7ff,#eefbf9)
     }
@@ -183,6 +209,7 @@
       .cards{grid-template-columns:repeat(2,1fr)}
       .quiz-fields{grid-template-columns:1fr 1fr}
       .official-links{grid-template-columns:1fr}
+      .practical-grid{grid-template-columns:1fr}
       .step-grid{grid-template-columns:repeat(2,1fr)}
       .why-box{grid-template-columns:1fr}
     }
@@ -229,8 +256,9 @@
       <a href="#home">דף הבית</a>
       <a href="#check">בדיקה קצרה</a>
       <a href="#rights">מה כדאי לבדוק?</a>
+      <a href="#before18">לפני גיל 18</a>
       <a href="#official">קישורים רשמיים</a>
-      <a href="#how">איך מתחילים?</a>
+      <a href="#faq">שאלות נפוצות</a>
     </nav>
     <div class="menu" aria-label="תפריט">☰</div>
   </div>
@@ -240,10 +268,9 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <h1>מתקרבים לגיל 18?<br><span class="accent">כדאי לבדוק אילו זכויות עשויות להיות רלוונטיות</span></h1>
+        <h1>מתקרבים לגיל 18?<br><span class="accent">עושים סדר בזכויות ובצעד הבא</span></h1>
         <p>
-          המעבר לגיל 18 יכול להביא איתו שינויים בזכויות, בקצבאות ובמעמד מול הביטוח הלאומי.
-          ריכזנו מידע פשוט וברור שיעזור להבין מה כדאי לבדוק, אילו מסלולים עשויים להיות רלוונטיים ואיפה למצוא מידע רשמי נוסף.
+          ענו על בדיקה קצרה, ראו אילו נושאים כדאי לבדוק וקבלו קישורים ישירים למידע הרשמי של הביטוח הלאומי.
         </p>
         <div class="cta">
           <a class="btn btn-primary" href="#check">בדיקה קצרה – מה כדאי לבדוק? ←</a>
@@ -331,34 +358,76 @@
         <article class="card c-blue">
           <div class="icon">♿</div>
           <h3>נכות כללית</h3>
-          <p>מה משתנה במעבר מקצבת ילד נכה, מהם תנאי הזכאות ומה בודקים לאחר גיל 18.</p>
-          <span style="margin-top:auto;font-weight:800;color:var(--navy)">נכות כללית</span>
+          <p>המעבר מקצבת ילד נכה אינו המשך אוטומטי. בנכות כללית נבדקות הנכות הרפואית וההשפעה על היכולת לעבוד ולהשתכר.</p>
+          <div class="card-action"><b>מה עושים עכשיו?</b><span>מכינים מסמכים רפואיים עדכניים ובודקים את תנאי הזכאות.</span></div>
+          <a class="mini-link" target="_blank" rel="noopener" href="https://www.btl.gov.il/BENEFITS/DISABILITY/Pages/default.aspx">מידע רשמי – נכות כללית ↗</a>
         </article>
 
         <article class="card c-teal">
           <div class="icon">⌂</div>
           <h3>שירותים מיוחדים (שר״ם)</h3>
-          <p>למי שזקוק לעזרה בפעולות היום־יום או להשגחה, ובכפוף לתנאי הזכאות.</p>
-          <span style="margin-top:auto;font-weight:800;color:var(--navy)">שירותים מיוחדים (שר״ם)</span>
+          <p>שר״ם מתמקד במידת התלות בעזרת אדם אחר בפעולות היום־יום ובצורך בהשגחה.</p>
+          <div class="card-action"><b>מה עושים עכשיו?</b><span>אם יש צורך בעזרה או בהשגחה, בודקים את תנאי שר״ם ומצרפים מסמכים רפואיים עדכניים.</span></div>
+          <a class="mini-link" target="_blank" rel="noopener" href="https://www.btl.gov.il/BENEFITS/ATTENDANCE_ALLOWANCE/Pages/default.aspx">מידע רשמי – שר״ם ↗</a>
         </article>
 
         <article class="card c-lav">
           <div class="icon">💼</div>
           <h3>שיקום מקצועי</h3>
-          <p>אפשרויות ללימודים, הכשרה וליווי להשתלבות בעבודה למי שעומד בתנאים.</p>
-          <span style="margin-top:auto;font-weight:800;color:var(--navy)">שיקום מקצועי</span>
+          <p>מסלול שיכול לסייע באמצעות אבחון, לימודים, הכשרה וליווי להשתלבות בעבודה.</p>
+          <div class="card-action"><b>מה עושים עכשיו?</b><span>בודקים אם קיימת קביעה רפואית מתאימה ואם יש צורך בהכשרה כדי להשתלב בעבודה.</span></div>
+          <a class="mini-link" target="_blank" rel="noopener" href="https://www.btl.gov.il/benefits/Vocational_Rehabilitation/Vocational_Rehabilitation_disabeld/Pages/Zacaut.aspx">מידע רשמי – שיקום מקצועי ↗</a>
         </article>
 
         <article class="card c-peach">
           <div class="icon">◉</div>
           <h3>דמי ביטוח</h3>
-          <p>מה משתנה בגיל 18 לפי המעמד: שכיר, עצמאי, לא עובד, לפני גיוס או מקבל קצבה.</p>
-          <span style="margin-top:auto;font-weight:800;color:var(--navy)">דמי ביטוח</span>
+          <p>מגיל 18 החיוב בדמי ביטוח תלוי במעמד ובהכנסה: שכיר, עצמאי, לא עובד, לפני שירות או מקבל קצבה.</p>
+          <div class="card-action"><b>מה עושים עכשיו?</b><span>בודקים את המעמד, ההכנסה והאם חל פטור.</span></div>
+          <a class="mini-link" target="_blank" rel="noopener" href="https://www.btl.gov.il/Insurance/Health_Insurance/Pages/%D7%97%D7%95%D7%91%D7%AA%20%D7%AA%D7%A9%D7%9C%D7%95%D7%9D%20%D7%93%D7%9E%D7%99%20%D7%91%D7%99%D7%98%D7%95%D7%97%20%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA.aspx">מידע רשמי – דמי ביטוח ↗</a>
         </article>
       </div>
     </div>
   </section>
 
+
+
+  <section id="before18" class="practical-section">
+    <div class="wrap">
+      <h2 class="section-title">חשוב לדעת לפני גיל 18</h2>
+      <p class="section-sub">כמה דברים שכדאי לעשות מראש כדי לא לעכב את הבדיקה.</p>
+      <div class="practical-grid">
+        <div class="practical-card">
+          <span class="practical-num">1</span>
+          <div><b>לשים לב לפנייה מהביטוח הלאומי</b><p>לפני גיל 18 הביטוח הלאומי שולח באופן יזום תביעות לנכות כללית ו/או לשר״ם. חשוב להחזיר אותן מלאות וחתומות.</p></div>
+        </div>
+        <div class="practical-card">
+          <span class="practical-num">2</span>
+          <div><b>להכין מסמכים רפואיים עדכניים</b><p>כדאי לצרף מסמכים שמציגים את המצב הנוכחי ואת ההשפעה התפקודית.</p></div>
+        </div>
+        <div class="practical-card">
+          <span class="practical-num">3</span>
+          <div><b>לבדוק אם צריך גם שר״ם</b><p>אם יש צורך בעזרת אדם אחר בפעולות היום־יום או בהשגחה, כדאי לבדוק גם תביעה לשירותים מיוחדים.</p></div>
+        </div>
+        <div class="practical-card">
+          <span class="practical-num">4</span>
+          <div><b>לבדוק לימודים והכנסה</b><p>אם יש הכנסה מעבודה או עסק, או לימודים בחינוך מיוחד/שילוב, כדאי לוודא שהמידע והאישורים הרלוונטיים מוכנים.</p></div>
+        </div>
+      </div>
+
+      <div class="prepare-box">
+        <h3>מה כדאי להכין מראש?</h3>
+        <div class="prepare-tags">
+          <span>מסמכים רפואיים עדכניים</span>
+          <span>טפסים מלאים וחתומים</span>
+          <span>צו אפוטרופסות – אם קיים</span>
+          <span>אישור מבית הספר – אם רלוונטי</span>
+          <span>פרטי הכנסה מעבודה או עסק</span>
+        </div>
+        <a class="mini-link strong" target="_blank" rel="noopener" href="https://www.btl.gov.il/benefits/Disabled_Child/kitzbaot/Pages/maavarnehut.aspx">מידע רשמי על המעבר מקצבת ילד נכה ↗</a>
+      </div>
+    </div>
+  </section>
 
   <section id="official">
     <div class="wrap">
@@ -429,6 +498,31 @@
     </div>
   </section>
 
+
+  <section id="faq" class="faq-section">
+    <div class="wrap">
+      <h2 class="section-title">שאלות נפוצות</h2>
+      <div class="faq-list">
+        <details>
+          <summary>האם קצבת ילד נכה ממשיכה אוטומטית אחרי גיל 18?</summary>
+          <p>לא. המעבר לנכות כללית נבדק לפי תנאי הזכאות למסלול הבוגר. לפני גיל 18 הביטוח הלאומי עשוי לשלוח תביעה באופן יזום, ויש להחזיר אותה עם המסמכים הנדרשים.</p>
+        </details>
+        <details>
+          <summary>אפשר לקבל גם נכות כללית וגם שר״ם?</summary>
+          <p>בתנאים מסוימים כן. אלה שני מסלולים שונים: נכות כללית בודקת בעיקר יכולת עבודה והשתכרות, ושר״ם בודק תלות בעזרת אדם אחר והצורך בהשגחה.</p>
+        </details>
+        <details>
+          <summary>מה אם לומדים בחינוך מיוחד או מקבלים שעות שילוב?</summary>
+          <p>מסגרת הלימודים עשויה להיות רלוונטית במעבר לגיל 18. במקרים המתאימים יש לצרף אישור עדכני על הלימודים או על הזכאות לשעות שילוב.</p>
+        </details>
+        <details>
+          <summary>מה אם יש הכנסה מעבודה או עסק?</summary>
+          <p>הכנסה ומעמד תעסוקתי עשויים להשפיע על הזכאות ועל דמי הביטוח. חשוב למלא את השדות הרלוונטיים בתביעה ולבדוק את הכללים העדכניים.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <section class="final-cta">
     <div class="wrap final-box">
       <h2>עשינו קצת סדר?</h2>
@@ -444,8 +538,9 @@
       <a href="#home">דף הבית</a>
       <a href="#check">בדיקה קצרה</a>
       <a href="#rights">מה כדאי לבדוק?</a>
+      <a href="#before18">לפני גיל 18</a>
       <a href="#official">קישורים רשמיים</a>
-      <a href="#how">איך מתחילים?</a>
+      <a href="#faq">שאלות נפוצות</a>
     </div>
     <div class="disclaimer">
       המידע באתר הוא מידע כללי ואינפורמטיבי בלבד. האתר אינו אתר רשמי של המוסד לביטוח לאומי ואינו מחליף ייעוץ, בדיקה או החלטה של גורם מוסמך. תנאים, סכומים ונהלים עשויים להשתנות.
@@ -468,30 +563,54 @@ function showLandingResult(){
     return;
   }
 
-  const items=[];
-  const links=[];
+  const results=[];
   if(age==='17–18' || age==='18 ומעלה' || child==='כן' || child==='לא בטוח/ה'){
-    items.push('נכות כללית – כדאי לבדוק את המעבר מקצבת ילד נכה ואת תנאי הזכאות לאחר גיל 18.');
-    links.push('<a target="_blank" rel="noopener" href="https://www.btl.gov.il/BENEFITS/DISABILITY/Pages/default.aspx">ביטוח לאומי – נכות כללית ↗</a>');
+    results.push({
+      title:'נכות כללית',
+      why:'כדאי לבדוק את המעבר מקצבת ילד נכה ואת תנאי הזכאות למסלול הבוגר.',
+      next:'להכין מסמכים רפואיים עדכניים ולבדוק את תנאי הזכאות.',
+      link:'https://www.btl.gov.il/BENEFITS/DISABILITY/Pages/default.aspx'
+    });
   }
   if(help==='כן' || help==='לא בטוח/ה'){
-    items.push('שירותים מיוחדים (שר״ם) – כדאי לבדוק זכאות אם יש צורך בעזרה בפעולות היום־יום או בהשגחה.');
-    links.push('<a target="_blank" rel="noopener" href="https://www.btl.gov.il/BENEFITS/ATTENDANCE_ALLOWANCE/Pages/default.aspx">ביטוח לאומי – שר״ם ↗</a>');
+    results.push({
+      title:'שירותים מיוחדים (שר״ם)',
+      why:'רלוונטי לבדיקה כאשר יש צורך בעזרה בפעולות היום־יום או בהשגחה.',
+      next:'להכין תיאור ומסמכים רפואיים עדכניים ולבדוק את תנאי שר״ם.',
+      link:'https://www.btl.gov.il/BENEFITS/ATTENDANCE_ALLOWANCE/Pages/default.aspx'
+    });
   }
   if(age==='17–18' || age==='18 ומעלה'){
-    items.push('שיקום מקצועי – ייתכן שכדאי לבדוק אפשרויות ללימודים, הכשרה וליווי להשתלבות בעבודה.');
-    links.push('<a target="_blank" rel="noopener" href="https://www.btl.gov.il/benefits/Vocational_Rehabilitation/Vocational_Rehabilitation_disabeld/Pages/Zacaut.aspx">ביטוח לאומי – שיקום מקצועי ↗</a>');
+    results.push({
+      title:'שיקום מקצועי',
+      why:'ייתכן שכדאי לבדוק מסלול של לימודים, הכשרה וליווי להשתלבות בעבודה.',
+      next:'לבדוק אם קיימת קביעה רפואית מתאימה ואם יש צורך בהכשרה מקצועית.',
+      link:'https://www.btl.gov.il/benefits/Vocational_Rehabilitation/Vocational_Rehabilitation_disabeld/Pages/Zacaut.aspx'
+    });
   }
   if(work){
-    items.push('דמי ביטוח – כדאי לבדוק מה חל לפי המעמד התעסוקתי והגיל.');
+    results.push({
+      title:'דמי ביטוח',
+      why:'מגיל 18 החיוב תלוי במעמד ובהכנסה, וייתכנו פטורים.',
+      next:'לבדוק את המעמד התעסוקתי, ההכנסה והאם חל פטור.',
+      link:'https://www.btl.gov.il/Insurance/Health_Insurance/Pages/%D7%97%D7%95%D7%91%D7%AA%20%D7%AA%D7%A9%D7%9C%D7%95%D7%9D%20%D7%93%D7%9E%D7%99%20%D7%91%D7%99%D7%98%D7%95%D7%97%20%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA.aspx'
+    });
   }
   if(education!=='לא'){
-    items.push('חינוך מיוחד ושילוב – כדאי לבדוק כיצד מסגרת הלימודים עשויה להיות רלוונטית למעבר לגיל 18.');
+    results.push({
+      title:'חינוך מיוחד ושילוב',
+      why:'מסגרת הלימודים עשויה להיות רלוונטית במעבר לגיל 18.',
+      next:'להכין אישור עדכני מבית הספר אם רלוונטי.',
+      link:'https://www.btl.gov.il/benefits/Disabled_Child/kitzbaot/Pages/maavarnehut.aspx'
+    });
   }
 
   box.style.display='block';
-  const uniqueLinks=[...new Set(links)];
-  box.innerHTML='<b>לפי התשובות שלך, כדאי לבדוק:</b><ul>'+items.map(x=>'<li>'+x+'</li>').join('')+'</ul>'+(uniqueLinks.length?'<div class="result-links">'+uniqueLinks.join('')+'</div>':'')+'<p style="margin:10px 0 0;color:var(--muted)">זהו כיוון ראשוני בלבד ואינו קובע זכאות.</p>';
+  box.innerHTML='<b>לפי התשובות שלך, אלה הנושאים שכדאי לבדוק:</b>'+
+    '<div class="smart-results">'+results.map(r=>
+      '<div class="smart-result"><h4>'+r.title+'</h4><p><b>למה זה רלוונטי?</b> '+r.why+'</p><p><b>מה עושים עכשיו?</b> '+r.next+'</p><a target="_blank" rel="noopener" href="'+r.link+'">למידע הרשמי בביטוח לאומי ↗</a></div>'
+    ).join('')+'</div>'+
+    '<p style="margin:12px 0 0;color:var(--muted)">זהו כיוון ראשוני בלבד ואינו קובע זכאות.</p>';
   box.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 </script>
