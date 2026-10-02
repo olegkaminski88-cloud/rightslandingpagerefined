@@ -9,10 +9,10 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="הזכויות שלי – לקראת גיל 18">
   <meta property="og:description" content="מידע פשוט וברור על זכויות לקראת גיל 18, שאלון קצר וקישורים רשמיים לביטוח הלאומי.">
-  <meta property="og:url" content="https://rightslandingpagerefined-2.vercel.app/landing.html?v=5">
-  <meta property="og:image" content="https://rightslandingpagerefined-2.vercel.app/share-card.jpg?v=5">
-  <meta property="og:image:url" content="https://rightslandingpagerefined-2.vercel.app/share-card.jpg?v=5">
-  <meta property="og:image:secure_url" content="https://rightslandingpagerefined-2.vercel.app/share-card.jpg?v=5">
+  <meta property="og:url" content="https://rightslandingpagerefined-2.vercel.app/landing.html?v=7">
+  <meta property="og:image" content="https://rightslandingpagerefined-2.vercel.app/share-card.jpg?v=7">
+  <meta property="og:image:url" content="https://rightslandingpagerefined-2.vercel.app/share-card.jpg?v=7">
+  <meta property="og:image:secure_url" content="https://rightslandingpagerefined-2.vercel.app/share-card.jpg?v=7">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="600">
   <meta property="og:image:height" content="315">
@@ -20,13 +20,13 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="הזכויות שלי – לקראת גיל 18">
   <meta name="twitter:description" content="מידע פשוט וברור על זכויות לקראת גיל 18, שאלון קצר וקישורים רשמיים לביטוח הלאומי.">
-  <meta name="twitter:image" content="https://rightslandingpagerefined-2.vercel.app/share-card.jpg?v=5">
+  <meta name="twitter:image" content="https://rightslandingpagerefined-2.vercel.app/share-card.jpg?v=7">
   <link rel="canonical" href="https://rightslandingpagerefined-2.vercel.app/landing.html">
-  <link rel="image_src" href="https://rightslandingpagerefined-2.vercel.app/share-card.jpg?v=5">
+  <link rel="image_src" href="https://rightslandingpagerefined-2.vercel.app/share-card.jpg?v=7">
   <meta property="og:locale" content="he_IL">
   <meta itemprop="name" content="הזכויות שלי – לקראת גיל 18">
   <meta itemprop="description" content="מידע פשוט וברור על זכויות לקראת גיל 18, שאלון קצר וקישורים רשמיים לביטוח הלאומי.">
-  <meta itemprop="image" content="https://rightslandingpagerefined-2.vercel.app/share-card.jpg?v=5">
+  <meta itemprop="image" content="https://rightslandingpagerefined-2.vercel.app/share-card.jpg?v=7">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -37,7 +37,7 @@
     "inLanguage": "he",
     "primaryImageOfPage": {
       "@type": "ImageObject",
-      "url": "https://rightslandingpagerefined-2.vercel.app/share-card.jpg?v=5",
+      "url": "https://rightslandingpagerefined-2.vercel.app/share-card.jpg?v=7",
       "width": 600,
       "height": 315
     }
@@ -87,7 +87,10 @@
     .brand{font-weight:800;color:var(--navy);line-height:1.05}
     .brand small{display:block;font-size:12px;font-weight:600;margin-top:3px}
     nav{display:flex;gap:18px;font-size:14px;color:#3d5f7c}
-    .menu{display:none;font-size:28px;line-height:1}
+    .menu{display:none;font-size:28px;line-height:1;background:transparent;border:0;color:var(--navy);cursor:pointer;padding:8px}
+    .mobile-nav{display:none;background:#fff;border-top:1px solid var(--line);padding:10px 16px 16px}
+    .mobile-nav.open{display:grid;gap:4px}
+    .mobile-nav a{padding:11px 8px;border-bottom:1px solid #edf3f8;color:var(--navy);font-weight:700}
 
     .hero{
       background:
@@ -327,8 +330,17 @@
       <a href="#official">קישורים רשמיים</a>
       <a href="#faq">שאלות נפוצות</a>
     </nav>
-    <div class="menu" aria-label="תפריט">☰</div>
+    <button class="menu" id="mobile-menu-toggle" type="button" aria-label="פתיחת תפריט" aria-expanded="false" aria-controls="mobile-nav">☰</button>
   </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="ניווט לנייד">
+    <a href="#home">דף הבית</a>
+    <a href="#check">בדיקה קצרה</a>
+    <a href="#rights">מה כדאי לבדוק?</a>
+    <a href="#details">מידע מורחב</a>
+    <a href="#before18">לפני גיל 18</a>
+    <a href="#official">קישורים רשמיים</a>
+    <a href="#faq">שאלות נפוצות</a>
+  </nav>
 </header>
 
 <main id="home">
@@ -471,24 +483,27 @@
           <div class="deep-content">
             <p>המעבר מקצבת ילד נכה לנכות כללית אינו אוטומטי. בנכות כללית בודקים גם את הנכות הרפואית וגם את ההשפעה שלה על היכולת לעבוד ולהשתכר.</p>
             <div class="deep-note"><b>לפני גיל 18:</b> הביטוח הלאומי שולח באופן יזום תביעות לנכות כללית ו/או לשר״ם. חשוב להחזיר את התביעה עם מסמכים רפואיים עדכניים כדי לאפשר בדיקה ורצף זכויות.</div>
-            <div class="deep-note"><b>בתקופת המעבר:</b> הביטוח הלאומי ישלם את הקצבה הגבוהה ביותר בהתאם לכללים. בכל מקרה לא תשולם כפל קצבה.</div>
+            <div class="deep-note"><b>בתקופת המעבר:</b> קצבת ילד נכה משולמת עד גיל 18 ו־31 יום. אם קצבת ילד נכה גבוהה יותר, היא עשויה להמשיך עד גיל 18 ו־90 יום, ומגיל 18 ו־91 יום עוברים לנכות כללית ו/או שר״ם בהתאם לזכאות. אם נכות כללית ו/או שר״ם גבוהים יותר, ניתן לעבור אליהם מגיל 18 ו־31 יום. בכל מקרה לא תשולם כפל קצבה.</div>
             <h4>תנאים מרכזיים שכדאי להכיר</h4>
             <ul>
+              <li><b>גיל ותושבות:</b> נכות כללית מיועדת, ככלל, לתושב/ת ישראל שמלאו לו/ה 18 שנים ועדיין לא הגיע/ה לגיל פרישה, בכפוף לתנאים הרשמיים.</li>
               <li><b>הכנסה מעבודה:</b> נכון ל־2026, מי שעובד עשוי לעמוד בתנאי ההכנסה אם ההכנסה ברוטו נמוכה מ־8,261 ₪ במשך 90 ימים רצופים במהלך 15 החודשים שלפני הגשת התביעה, בכפוף לשאר התנאים.</li>
-              <li><b>נכות רפואית:</b> בדרך כלל נדרשת נכות רפואית משוקללת של 60% לפחות, או 40% כשיש כמה ליקויים וליקוי אחד הוא לפחות 25%.</li>
-              <li><b>אי־כושר:</b> נבדק האם עקב הנכות היכולת לעבוד ולהשתכר נפגעה ב־50% לפחות.</li>
+              <li><b>נכות רפואית:</b> נדרשת נכות רפואית משוקללת של 60% לפחות, או 40% לפחות כאשר יש כמה ליקויים וליקוי אחד הוא לפחות 25%.</li>
+              <li><b>אי־כושר:</b> נבדק האם עקב הנכות אין יכולת לעבוד או שיכולת ההשתכרות ירדה ב־50% לפחות. דרגות אי־הכושר האפשריות הן 60%, 65%, 74% או 100%.</li>
             </ul>
             <div class="deep-warning"><b>חשוב:</b> אחוז הנכות הרפואית ודרגת אי־הכושר הם שני דברים שונים ונבדקים בנפרד.</div>
             <div class="deep-note"><b>אם יש הכנסה מעבודה או עסק:</b> יש לבדוק כיצד ההכנסה והמעמד משפיעים על הזכאות ועל דמי הביטוח, ולהקפיד לסמן בטופס התביעה את השדות הרלוונטיים.</div>
             <p>אפשר להיעזר בשירות <b>„יד מכוונת”</b> להכנה ללא תשלום.</p>
             <h4>חינוך מיוחד ושילוב</h4>
             <ul>
-              <li>כאשר מי שקיבל קצבת ילד נכה ממשיך ללמוד במסגרת חינוך מיוחד, כדאי לצרף אישור עדכני על המשך הלימודים.</li>
-              <li>המידע רלוונטי גם לתלמידי י״א–י״ב בחינוך הרגיל הזכאים לשעות שילוב; במקרים המתאימים יש להמציא אישור מבית הספר.</li>
+              <li>במעבר מקצבת ילד נכה לנכות כללית, מי שממשיך ללמוד בבית ספר של החינוך המיוחד עשוי לקבל דרגת אי־כושר מלאה זמנית עד לסיום הלימודים, בכפוף לתנאים שבחוזר הביטוח הלאומי.</li>
+              <li>גם תלמיד/ת י״א–י״ב בחינוך הרגיל שהיה/תה זכאי/ת לקצבת ילד נכה וזכאי/ת לשעות שילוב עשוי/ה להיכלל בהסדר, ויש להמציא אישור מתאים מבית הספר.</li>
+              <li>לפי החוזר, כיתות י״ג–י״ד אינן נחשבות כהשלמת לימודים תיכוניים לצורך ההסדר הזה.</li>
             </ul>
             <div class="deep-actions">
               <a target="_blank" rel="noopener" href="https://www.btl.gov.il/benefits/Disabled_Child/kitzbaot/Pages/maavarnehut.aspx">מעבר מקצבת ילד נכה – ביטוח לאומי ↗</a>
               <a target="_blank" rel="noopener" href="https://www.btl.gov.il/BENEFITS/DISABILITY/Pages/default.aspx">נכות כללית – מידע רשמי ↗</a>
+              <a target="_blank" rel="noopener" href="https://www.btl.gov.il/benefits/HozrimGimlaot/Hozrim/%D7%97%D7%95%D7%96%D7%A8%20%D7%A0%D7%9B%D7%95%D7%AA%201911%20-%20%D7%A7%D7%91%D7%99%D7%A2%D7%AA%20%D7%93%D7%A8%D7%92%D7%AA%20%D7%90%D7%99%20%D7%9B%D7%95%D7%A9%D7%A8%20%D7%AA%D7%A0%D7%90%D7%99%D7%9D%20%D7%9C%D7%A7%D7%91%D7%99%D7%A2%D7%AA%20%D7%93%D7%A8%D7%92%D7%AA%20%D7%90%D7%99%20%D7%9B%D7%95%D7%A9%D7%A8%20%D7%9E%D7%9C%D7%90%D7%94%20%D7%9C%D7%9E%D7%99%20%D7%A9%D7%9E%D7%A9%D7%9C%D7%99%D7%9D%20%D7%90%D7%AA%20%D7%9C%D7%99%D7%9E%D7%95%D7%93%D7%99%D7%95%20%D7%94%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D.pdf">חוזר ביטוח לאומי – חינוך מיוחד ושילוב ↗</a>
             </div>
           </div>
         </details>
@@ -500,16 +515,24 @@
             <div class="deep-note"><b>הבדל חשוב:</b> בנכות כללית נבדקת היכולת להשתכר ולעבוד (אי־כושר), ובשר״ם נבדקת מידת התלות באדם אחר והצורך בעזרה ובהשגחה. בתנאים מסוימים אפשר לקבל את שתי הקצבאות.</div>
             <h4>מי עשוי להיות רלוונטי לבדיקה?</h4>
             <ul>
-              <li>תושב/ת ישראל מגיל 18 ועד גיל פרישה, בכפוף לתנאים.</li>
-              <li>מי שמקבל קצבת נכות כללית.</li>
-              <li>גם מי שאינו מקבל קצבת נכות עשוי להיות זכאי אם נקבעו לו 75% נכות רפואית משוקללת, בכפוף לשאר התנאים.</li>
-              <li>קיימים תנאים נוספים לגבי הכנסה מעבודה, שהייה במוסד וקצבאות אחרות.</li>
+              <li>תושב/ת ישראל שמלאו לו/ה 18 שנים ועדיין לא הגיע/ה לגיל פרישה, בכפוף לתנאים. מי שהיה זכאי לשר״ם ביום הגיעו לגיל פרישה עשוי להמשיך לקבל את הקצבה כל עוד הוא עומד בתנאים.</li>
+              <li><b>מי שמקבל קצבת נכות כללית:</b> נדרש, בין היתר, סף רפואי של 60% נכות רפואית משוקללת, או 40% כאשר יש כמה ליקויים וליקוי אחד הוא לפחות 25%.</li>
+              <li><b>מי שאינו מקבל קצבת נכות כללית:</b> עשוי להיות זכאי אם נקבעו לו 75% נכות רפואית משוקללת לפחות.</li>
+              <li><b>הכנסה מעבודה:</b> נכון ל־2026, ההכנסה החודשית ברוטו מעבודה צריכה להיות עד 68,845 ₪, בכפוף לשאר התנאים.</li>
+              <li>מי ששוהה במוסד שבו ניתנים שירותי רפואה, סיעוד או שיקום אינו זכאי בתקופת השהייה, ויש גם כללים לגבי קצבאות ותשלומים אחרים עבור טיפול אישי או עזרה בבית.</li>
             </ul>
-            <div class="deep-note"><b>מה בודקים?</b> את מידת התלות בעזרת אדם אחר בפעולות היום־יום ואת הצורך בהשגחה, בהתאם למבחן התלות ולכללי הזכאות.</div>
+            <div class="deep-note"><b>מה בודקים?</b> את מידת התלות בעזרת אדם אחר בפעולות היום־יום, את הצורך בעזרה בפעולות משק הבית ואת הצורך בהשגחה למניעת סכנה, בהתאם למבחן התלות ולכללי הזכאות.</div>
             <ul>
               <li>הבדיקה מתייחסת למגבלות הנובעות מהליקוי הרפואי.</li>
-              <li>אם אין צורך בעזרה בפעולות היום־יום, לא תהיה זכאות לשר״ם על בסיס מבחן התלות.</li>
-              <li>במקרים מסוימים קיימת זכאות אוטומטית לאוכלוסיות מיוחדות על סמך מסמכים רפואיים.</li>
+              <li>גם מי שאינו זקוק לעזרה בפעולות היום־יום עשוי להיות זכאי אם הוא זקוק להשגחה בהתאם לכללים.</li>
+              <li>במקרים מסוימים הביטוח הלאומי פועל לקבוע זכאות לאוכלוסיות מיוחדות על סמך מסמכים רפואיים בלבד, ללא הגעה לוועדה רפואית.</li>
+            </ul>
+            <h4>רמות הקצבה – 2026</h4>
+            <ul>
+              <li>50% – 1,943 ₪.</li>
+              <li>112% – 4,501 ₪.</li>
+              <li>188% – 7,181 ₪.</li>
+              <li>235% – 9,126 ₪.</li>
             </ul>
             <h4>איך מגישים?</h4>
             <p>ממלאים תביעה ומצרפים מסמכים רפואיים עדכניים. אם לא ניתן לקבוע זכאות על סמך המסמכים בלבד, ייתכן זימון לוועדה או לבדיקת תלות.</p>
@@ -517,6 +540,7 @@
             <div class="deep-actions">
               <a target="_blank" rel="noopener" href="https://www.btl.gov.il/BENEFITS/ATTENDANCE_ALLOWANCE/Pages/default.aspx">שר״ם – מידע ותביעה ↗</a>
               <a target="_blank" rel="noopener" href="https://www.btl.gov.il/benefits/Attendance_Allowance/Pages/%D7%A9%D7%99%D7%A0%D7%95%D7%99%D7%99%D7%9D-%D7%91%D7%9E%D7%91%D7%97%D7%9F-%D7%94%D7%96%D7%9B%D7%90%D7%95%D7%AA-%D7%9C%D7%A7%D7%A6%D7%91%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D-%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D-%28%D7%9E%D7%91%D7%97%D7%9F-%D7%94--IADL%29.aspx">מבחן התלות ↗</a>
+              <a target="_blank" rel="noopener" href="https://www.btl.gov.il/benefits/Attendance_Allowance/Pages/OclosyitMeocdot.aspx">זכאות לאוכלוסיות מיוחדות ↗</a>
             </div>
           </div>
         </details>
@@ -536,10 +560,11 @@
             </ul>
             <h4>מה אפשר לקבל?</h4>
             <ul>
-              <li>אבחון תעסוקתי.</li>
-              <li>לימודים או הכשרה מקצועית/אקדמית בהתאם לתכנית שאושרה.</li>
-              <li>במקרים המתאימים – תמיכות והוצאות הקשורות ללימודים.</li>
-              <li>ליווי והכוונה להשתלבות בעבודה.</li>
+              <li>אבחון תעסוקתי והכוונה מקצועית.</li>
+              <li>לימודים מקצועיים או אקדמיים בהתאם לתכנית השיקום שאושרה.</li>
+              <li>במקרים המתאימים – השתתפות בשכר לימוד, נסיעות, ספרים ומכשירי לימוד.</li>
+              <li>דמי שיקום בתקופת ההכשרה או הלימודים למי שעומד בתנאים.</li>
+              <li>סדנאות הכנה לעבודה, ליווי וסיוע בהשמה.</li>
             </ul>
             <div class="deep-actions">
               <a target="_blank" rel="noopener" href="https://www.btl.gov.il/benefits/Vocational_Rehabilitation/Vocational_Rehabilitation_disabeld/Pages/Zacaut.aspx">שיקום מקצועי – תנאי זכאות ↗</a>
@@ -553,19 +578,19 @@
             <p>גיל 18 הוא נקודת שינוי במעמד הביטוחי. לא כל צעיר משלם אותו דבר – צריך לבדוק את המעמד וההכנסה.</p>
             <h4>לפני גיל 18</h4>
             <ul>
-              <li><b>שכיר/ה:</b> המעסיק מדווח ומשלם. לפי המידע באתר, לעובד שטרם מלאו לו 18 אין ניכוי של דמי ביטוח לאומי ובריאות מהשכר לפי טבלת השכירים הרלוונטית.</li>
-              <li><b>עצמאי/ת:</b> אם הצעיר עונה להגדרת עובד עצמאי, חלים כללים ייעודיים ושיעורים מופחתים; מי שטרם מלאו לו 18 פטור מדמי ביטוח בריאות.</li>
+              <li><b>שכיר/ה:</b> המעסיק מדווח ומשלם את דמי הביטוח החלים על עובד שטרם מלאו לו 18; לפי טבלת 2026 אין ניכוי דמי ביטוח מהעובד עצמו.</li>
+              <li><b>עצמאי/ת:</b> אם הצעיר עונה להגדרת עובד עצמאי, נכון ל־2026 שיעורי הביטוח הלאומי הם 0.26% על הכנסה עד 7,703 ₪ ו־0.78% על ההכנסה שמעל סכום זה ועד התקרה. מי שטרם מלאו לו 18 פטור מדמי ביטוח בריאות.</li>
             </ul>
             <div class="deep-warning"><b>פתיחת עסק לבדה אינה קובעת מעמד “עצמאי”.</b> נכון ל־2026, הביטוח הלאומי בודק בין היתר שעות עבודה והכנסה: 20 שעות שבועיות בממוצע; או הכנסה חודשית של 6,885 ₪ ומעלה; או 12 שעות שבועיות והכנסה של 2,065 ₪ ומעלה.</div>
             <h4>מגיל 18</h4>
             <ul>
               <li><b>שכיר/ה:</b> המעסיק מנכה את חלק העובד ומשלם גם את חלק המעסיק.</li>
-              <li><b>עצמאי/ת:</b> התשלום נעשה לפי הכנסה ומעמד.</li>
-              <li><b>לא עובד/ת:</b> עשויה להיות חובת תשלום מינימלית.</li>
+              <li><b>עצמאי/ת:</b> התשלום נעשה לפי ההכנסה והמעמד שנקבע בביטוח הלאומי.</li>
+              <li><b>לא עובד/ת וללא הכנסות:</b> נכון ל־2026, סכום המינימום הוא 266 ₪ לחודש, אלא אם חל פטור.</li>
               <li><b>לפני גיוס/שירות:</b> ייתכן פטור עד תחילת השירות, בהתאם לתנאים.</li>
-              <li><b>מקבל/ת קצבת נכות:</b> ייתכנו פטורים או אופן גבייה שונה.</li>
+              <li><b>מקבל/ת קצבת נכות:</b> מי שמקבל קצבת נכות כללית בשיעור 75% ומעלה לצמיתות, או זמנית לשנה רצופה לפחות, עשוי להיות פטור מדמי ביטוח לאומי בהתאם לכללים; דמי ביטוח בריאות וכללי העבודה נבדקים בנפרד.</li>
             </ul>
-            <div class="deep-note"><b>פטור לפני שירות:</b> לפי המידע באתר, מי שמלאו לו 18 ויתחיל שירות לפני גיל 21 עשוי להיות פטור מדמי ביטוח לאומי ובריאות עד תחילת השירות אם אינו עובד כשכיר/עצמאי ואין לו הכנסה מעל 688 ₪ לחודש, נכון ל־2026.</div>
+            <div class="deep-note"><b>פטור לפני שירות:</b> מי שמלאו לו 18 ויתחיל שירות סדיר או שירות לאומי עד גיל 21 עשוי להיות פטור מדמי ביטוח לאומי ובריאות עד תחילת השירות, אם אינו עובד כשכיר או כעצמאי ואין לו הכנסה מעל 688 ₪ לחודש, נכון ל־2026.</div>
             <div class="deep-actions">
               <a target="_blank" rel="noopener" href="https://www.btl.gov.il/Insurance/Health_Insurance/Pages/%D7%97%D7%95%D7%91%D7%AA%20%D7%AA%D7%A9%D7%9C%D7%95%D7%9D%20%D7%93%D7%9E%D7%99%20%D7%91%D7%99%D7%98%D7%95%D7%97%20%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA.aspx">דמי ביטוח בריאות – מידע רשמי ↗</a>
               <a target="_blank" rel="noopener" href="https://www.btl.gov.il/Insurance/National%20Insurance/type_list/Self_Employed/Pages/default.aspx">מי נחשב עובד עצמאי? ↗</a>
@@ -626,6 +651,12 @@
         </a>
         <a class="official-link" target="_blank" rel="noopener" href="https://www.btl.gov.il/benefits/Vocational_Rehabilitation/Vocational_Rehabilitation_disabeld/Pages/Zacaut.aspx">
           <span>שיקום מקצועי<small>מידע על זכאות והמשך טיפול</small></span><span class="arrow">↗</span>
+        </a>
+        <a class="official-link" target="_blank" rel="noopener" href="https://www.btl.gov.il/Insurance/Health_Insurance/Pages/%D7%97%D7%95%D7%91%D7%AA%20%D7%AA%D7%A9%D7%9C%D7%95%D7%9D%20%D7%93%D7%9E%D7%99%20%D7%91%D7%99%D7%98%D7%95%D7%97%20%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA.aspx">
+          <span>דמי ביטוח ובריאות<small>חיוב, פטורים ומעמד</small></span><span class="arrow">↗</span>
+        </a>
+        <a class="official-link" target="_blank" rel="noopener" href="https://www.btl.gov.il/snifim/Pages/yadMechavenet1.aspx">
+          <span>יד מכוונת<small>ייעוץ והכנה לוועדות רפואיות ללא תשלום</small></span><span class="arrow">↗</span>
         </a>
         <a class="official-link" target="_blank" rel="noopener" href="https://www.btl.gov.il/%D7%98%D7%A4%D7%A1%D7%99%D7%9D%20%D7%95%D7%90%D7%99%D7%A9%D7%95%D7%A8%D7%99%D7%9D/Pages/default.aspx">
           <span>טפסים ואישורים<small>מרכז הטפסים הרשמי של הביטוח הלאומי</small></span><span class="arrow">↗</span>
@@ -693,7 +724,7 @@
         </details>
         <details>
           <summary>אפשר לקבל גם נכות כללית וגם שר״ם?</summary>
-          <p>בתנאים מסוימים כן. אלה שני מסלולים שונים: נכות כללית בודקת בעיקר יכולת עבודה והשתכרות, ושר״ם בודק תלות בעזרת אדם אחר והצורך בהשגחה.</p>
+          <p>בתנאים מסוימים כן. אלה שני מסלולים שונים: בנכות כללית נבדקת היכולת לעבוד ולהשתכר (אי־כושר), ובשר״ם נבדקת מידת התלות בעזרת אדם אחר והצורך בעזרה ובהשגחה.</p>
         </details>
         <details>
           <summary>מה אם לומדים בחינוך מיוחד או מקבלים שעות שילוב?</summary>
@@ -734,6 +765,21 @@
 </footer>
 
 <script>
+const mobileMenuToggle=document.getElementById('mobile-menu-toggle');
+const mobileNav=document.getElementById('mobile-nav');
+if(mobileMenuToggle && mobileNav){
+  mobileMenuToggle.addEventListener('click',()=>{
+    const open=mobileNav.classList.toggle('open');
+    mobileMenuToggle.setAttribute('aria-expanded',String(open));
+    mobileMenuToggle.setAttribute('aria-label',open?'סגירת תפריט':'פתיחת תפריט');
+  });
+  mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    mobileNav.classList.remove('open');
+    mobileMenuToggle.setAttribute('aria-expanded','false');
+    mobileMenuToggle.setAttribute('aria-label','פתיחת תפריט');
+  }));
+}
+
 function showLandingResult(){
   const age=document.getElementById('q-age').value;
   const child=document.getElementById('q-child').value;
@@ -776,7 +822,7 @@ function showLandingResult(){
   if(work){
     results.push({
       title:'דמי ביטוח',
-      why:'מגיל 18 החיוב תלוי במעמד ובהכנסה, וייתכנו פטורים.',
+      why:'דמי הביטוח משתנים לפי גיל, מעמד והכנסה. לפני גיל 18 חלים כללים ייעודיים, ומגיל 18 ייתכנו חיוב או פטור בהתאם למצב.',
       next:'לבדוק את המעמד התעסוקתי, ההכנסה והאם חל פטור.',
       link:'https://www.btl.gov.il/Insurance/Health_Insurance/Pages/%D7%97%D7%95%D7%91%D7%AA%20%D7%AA%D7%A9%D7%9C%D7%95%D7%9D%20%D7%93%D7%9E%D7%99%20%D7%91%D7%99%D7%98%D7%95%D7%97%20%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA.aspx'
     });
@@ -786,7 +832,7 @@ function showLandingResult(){
       title:'חינוך מיוחד ושילוב',
       why:'מסגרת הלימודים עשויה להיות רלוונטית במעבר לגיל 18.',
       next:'להכין אישור עדכני מבית הספר אם רלוונטי.',
-      link:'https://www.btl.gov.il/benefits/Disabled_Child/kitzbaot/Pages/maavarnehut.aspx'
+      link:'https://www.btl.gov.il/benefits/HozrimGimlaot/Hozrim/%D7%97%D7%95%D7%96%D7%A8%20%D7%A0%D7%9B%D7%95%D7%AA%201911%20-%20%D7%A7%D7%91%D7%99%D7%A2%D7%AA%20%D7%93%D7%A8%D7%92%D7%AA%20%D7%90%D7%99%20%D7%9B%D7%95%D7%A9%D7%A8%20%D7%AA%D7%A0%D7%90%D7%99%D7%9D%20%D7%9C%D7%A7%D7%91%D7%99%D7%A2%D7%AA%20%D7%93%D7%A8%D7%92%D7%AA%20%D7%90%D7%99%20%D7%9B%D7%95%D7%A9%D7%A8%20%D7%9E%D7%9C%D7%90%D7%94%20%D7%9C%D7%9E%D7%99%20%D7%A9%D7%9E%D7%A9%D7%9C%D7%99%D7%9D%20%D7%90%D7%AA%20%D7%9C%D7%99%D7%9E%D7%95%D7%93%D7%99%D7%95%20%D7%94%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D.pdf'
     });
   }
 
