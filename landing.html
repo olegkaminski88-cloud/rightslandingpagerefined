@@ -133,8 +133,19 @@
     }
     .card h3{font-size:23px;margin:10px 0 8px;color:var(--navy)}
     .card p{color:#465d71;margin:0 0 16px}
-    .card a{margin-top:auto;font-weight:800}
-    .card-action{margin:4px 0 16px;padding:12px;border-radius:14px;background:rgba(255,255,255,.68);font-size:14px}
+    .card a{margin-top:12px;font-weight:800}
+    .card-action{
+      margin-top:auto;
+      margin-bottom:16px;
+      padding:12px;
+      border-radius:14px;
+      background:rgba(255,255,255,.68);
+      font-size:14px;
+      min-height:136px;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-start
+    }
     .card-action b{display:block;color:var(--navy);margin-bottom:3px}
     .card-action span{color:#4c647a}
     .mini-link{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:9px 12px;border:1px solid #a9c4dc;background:#fff;border-radius:12px;color:var(--navy);font-weight:800}
@@ -286,6 +297,7 @@
       .deep-actions{display:grid}
       .deep-actions a{width:100%}
       .card{min-height:0;padding:20px}
+      .card-action{min-height:0}
       .card h3{font-size:22px}
       .step-grid{grid-template-columns:1fr}
       .step{
